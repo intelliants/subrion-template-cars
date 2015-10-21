@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template name="cars">
+	<title>Autos</title>
+	<summary>Template for Subrion Autos Script</summary>
+	<author>Gleb Surinov</author>
+	<contributor>Intelliants LLC</contributor>
+	<version>3.3.0</version>
+	<date>2015-06-14</date>
+	<compatibility>3.3</compatibility>
+
+	<dependency type="package" exist="1">autos</dependency>
+
+	<layout>
+		<position menu="1" movable="0">account</position>
+		<position menu="1" movable="0">mainmenu</position>
+
+		<position>teaser</position>
+		<position>popular_makes</position>
+		<position>bodystyle</position>
+		<position>verytop</position>
+		<position>top</position>
+		<position>landing</position>
+		<position>bottom</position>
+		<position>verybottom</position>
+		<position>copyright</position>
+
+		<section name="content">
+			<position fixed="1">left</position>
+			<position width="9">center</position>
+		</section>
+
+		<section name="footer-blocks">
+			<position width="2">footer1</position>
+			<position width="2">footer2</position>
+			<position width="2">footer3</position>
+			<position width="6">footer4</position>
+		</section>
+	</layout>
+
+	<configgroup name="template_cars">Template</configgroup>
+
+	<config group="template_cars" 
+		    name="cars_divider1" 
+		    type="divider" 
+		    order="3000">General</config>
+
+	<config group="template_cars" 
+		    name="max_top_menu_items" 
+		    type="text" 
+		    description="Max number of items in Main Menu"
+		    order="3002">5</config>
+
+	<config group="template_cars"
+		    name="fixed_navbar" 
+		    type="radio"
+		    order="3003" 
+		    values="1,0" 
+		    description="Fixed navbar">1</config>
+
+	<config group="template_cars" 
+		    name="website_bg" 
+		    type="image" 
+		    description="Header background"
+		    order="3004"><![CDATA[]]></config>
+
+	<changeset>
+		<menu position="account" status="active">account</menu>
+
+		<block position="verytop" status="active" pages="index" header="0" classname="panel-clear">autos_search</block>
+		<block position="popular_makes" status="active" pages="index" header="0" classname="panel-clear">auto_make_list</block>
+		<block position="bodystyle" status="active" pages="index" header="0" classname="panel-clear">auto_body_list</block>
+		<block position="verybottom" status="active" pages="index" header="0" classname="panel-clear">auto_recent</block>
+		<block position="verytop" status="active" pages="index" header="0" classname="panel-clear">auto_sponsored</block>
+
+		<block position="landing" order="99" status="active" sticky="0" pages="index" header="0" classname="panel-clear">latest_news</block>
+		<block status="active" pages="search,search_autos,autos_index" classname="box--border">filters</block>
+
+		<block status="inactive" position="left" classname="box--border">common_statistics</block>
+		<block status="inactive">auto_year_list</block>
+		<block status="inactive">newsline</block>
+		<block status="inactive">blogroll</block>
+		<block status="inactive">new_blog_posts</block>
+		<block status="inactive">blogs_archive</block>
+	</changeset>
+
+	<blocks>
+		<block name="benefits" 
+			   title="Benefits" 
+			   position="landing" 
+			   header="0"
+			   classname="panel-clear"
+			   collapsible="0" 
+			   sticky="0"
+			   pages="index" 
+			   status="active" 
+			   type="html">
+			<![CDATA[
+<div class="benefits">
+	<div class="container">
+		<h2 class="title title--accent">Why our portal is the best?</h2>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="f-block">
+					<span class="fa fa-lock"></span>
+					<h4>Buy safely</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi repudiandae quo nisi iusto voluptatem minus debitis consequuntur.</p>
+					<p><a href="#">Learn more</a></p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="f-block">
+					<span class="fa fa-star"></span>
+					<h4>Looking for a special offer?</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi repudiandae quo nisi iusto voluptatem minus debitis consequuntur.</p>
+					<p><a href="#">Learn more</a></p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="f-block">
+					<span class="fa fa-rocket"></span>
+					<h4>Sell faster</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi repudiandae quo nisi iusto voluptatem minus debitis consequuntur.</p>
+					<p><a href="#">Learn more</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			]]>
+		</block>
+		<block name="footer1" 
+			   title="Cars for sale" 
+			   position="footer1" 
+			   header="1"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active" 
+			   type="smarty">
+			<![CDATA[
+<ul class="nav nav-links">
+	<li><a href="#">Used cars for sale</a></li>
+	<li><a href="#">Second hand cars for sale</a></li>
+	<li><a href="#">New cars for sale</a></li>
+	<li><a href="#">Special Offers</a></li>
+	<li><a href="#">Compare Cars</a></li>
+</ul>
+			]]>
+		</block>
+		<block name="footer2" 
+			   title="Car research" 
+			   position="footer2" 
+			   header="1"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active" 
+			   type="smarty">
+			<![CDATA[
+<ul class="nav nav-links">
+	<li><a href="#">Research Cars</a></li>
+	<li><a href="#">Car Valuations</a></li>
+	<li><a href="#">Car Finance</a></li>
+	<li><a href="#">Car Insurance</a></li>
+	<li><a href="#">Car Comparisons</a></li>
+	<li><a href="#">Help Me Choose</a></li>
+</ul>
+			]]>
+		</block>
+		<block name="footer3" 
+			   title="News & Reviews" 
+			   position="footer3" 
+			   header="1"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active"
+			   type="smarty">
+			<![CDATA[
+<ul class="nav nav-links">
+	<li><a href="#">Car News</a></li>
+	<li><a href="#">Car Reviews</a></li>
+	<li><a href="#">Car Videos</a></li>
+	<li><a href="#">Car Advice</a></li>
+</ul>
+			]]>
+		</block>
+		<block name="footer4" 
+			   title="Contact us" 
+			   position="footer4" 
+			   header="1"
+			   collapsible="0" 
+			   sticky="1" 
+			   status="active" 
+			   type="smarty">
+			<![CDATA[
+<p>You can change this block in admin panel. Remember, if you change template, this block will be lost. We advise you to clone this block.</p>
+<p>You can change this block in admin panel. Remember, if you change template, this block will be lost. We advise you to clone this block.</p>
+			]]>
+		</block>
+	</blocks>
+
+	<phrases>
+		<phrase category="frontend" key="login">Log in</phrase>
+		<phrase category="frontend" key="register">Sign up</phrase>
+		<phrase category="frontend" key="login_sign_up">Login / Sign up</phrase>
+		<phrase category="frontend" key="sell_car">Sell a car</phrase>
+		<phrase category="frontend" key="wishlist">Wishlist</phrase>
+		<phrase category="frontend" key="compare">Compare</phrase>
+		<phrase category="frontend" key="qsearch_find_a_perfect_car">Find a perfect car</phrase>
+		<phrase category="frontend" key="qsearch_popular">Popular</phrase>
+		<phrase category="frontend" key="qsearch_latest">Latest</phrase>
+		<phrase category="frontend" key="qsearch_featured">Featured</phrase>
+		<phrase category="frontend" key="qsearch_popular_makes">Popular makes</phrase>
+		<phrase category="frontend" key="qsearch_bodystyle">Bodystyle</phrase>
+		<phrase category="frontend" key="more_makes">Show more makes</phrase>
+		<phrase category="frontend" key="less_makes">Show less makes</phrase>
+	</phrases>
+</template>

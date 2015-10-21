@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="{$core.language.iso}" dir="{$core.language.direction}">
+	<head>
+		{ia_hooker name='smartyFrontBeforeHeadSection'}
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{ia_print_title}</title>
+		<meta name="description" content="{$core.page['meta-description']}">
+		<meta name="keywords" content="{$core.page['meta-keywords']}">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Subrion CMS {$config.version} - Open Source Content Management System">
+		<meta name="robots" content="index">
+		<meta name="robots" content="follow">
+		<meta name="revisit-after" content="1 day">
+		<base href="{$smarty.const.IA_URL}">
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<link rel="shortcut icon" href="{$core.page.nonProtocolUrl}favicon.ico">
+
+		{ia_add_media files='jquery, subrion, bootstrap' order=0}
+		{ia_print_js files='_IA_TPL_owl.carousel.min, _IA_TPL_app' order=999}
+
+		{ia_hooker name='smartyFrontAfterHeadSection'}
+
+		{ia_print_css display='on'}
+
+		{ia_add_js}
+			intelli.pageName = '{$core.page.name}';
+
+			{foreach $core.customConfig as $key => $value}
+				intelli.config.{$key} = '{$value}';
+			{/foreach}
+		{/ia_add_js}
+	</head>
+
+	<body class="page-{$core.page.name}{if $config.fixed_navbar} -fixed-navbar{/if}">
+		<nav class="navbar navbar-default {if $config.fixed_navbar}navbar-fixed-top{/if}">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="{$smarty.const.IA_URL}">
+						{if !empty($config.site_logo)}
+							<img src="{$core.page.nonProtocolUrl}uploads/{$config.site_logo}" alt="{$config.site}">
+						{else}
+							<span>Cars</span>
+						{/if}
+					</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="navbar-collapse">
+					{ia_blocks block='account'}
+					{ia_blocks block='mainmenu'}
+				</div>
+			</div>
+		</nav>
+
+		{if 'index' == $core.page.name}
+			<header class="header"{if $config.website_bg} style="background-image: url('{$smarty.const.IA_URL}uploads/{$config.website_bg}');"{/if}>
+				{*ia_blocks block='teaser'*}
+			</header>
+		{/if}
+
+		{ia_hooker name='smartyFrontBeforeBreadcrumb'}
+
+		{include file='breadcrumb.tpl'}
+
+		{if isset($iaBlocks.verytop)}
+			<div class="verytop">
+				{ia_blocks block='verytop'}
+			</div>
+		{/if}
+
+		{if 'index' == $core.page.name}
+			<div class="sec sec-landing">
+				{ia_blocks block='landing'}
+			</div>
+		{else}
+			<div class="content">
+				<div class="container">
+					<div class="row">
+						<div class="{width section='content' position='left' tag='col-md-'}{if 'autos_view' == $core.page.name} col-md-push-9{/if}">
+							{ia_blocks block='left'}
+						</div>
+						<div class="{width section='content' position='center' tag='col-md-'}{if 'autos_view' == $core.page.name} col-md-pull-3{/if}">
+							<div class="content__wrap">
+								{ia_hooker name='smartyFrontBeforeNotifications'}
+								{include file='notification.tpl'}
+
+								{ia_blocks block='top'}
+
+								{if 'autos_view' != $core.page.name}
+									<h1 class="page-header">{$core.page.title}</h1>
+								{/if}
+
+								{ia_hooker name='smartyFrontBeforeMainContent'}
+
+								{$_content_}
+
+								{ia_hooker name='smartyFrontAfterMainContent'}
+
+								{ia_blocks block='bottom'}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		{/if}
+		
+		{if isset($iaBlocks.verybottom)}
+			<div class="sec sec-verybottom">
+				<div class="container">{ia_blocks block='verybottom'}</div>
+			</div>
+		{/if}
+
+		{if isset($iaBlocks.footer1) || isset($iaBlocks.footer2) || isset($iaBlocks.footer3) || isset($iaBlocks.footer4)}
+			<div class="footer-blocks">
+				<div class="container">
+					<div class="row">
+						<div class="{width section='footer-blocks' position='footer1' tag='col-md-'}">{ia_blocks block='footer1'}</div>
+						<div class="{width section='footer-blocks' position='footer2' tag='col-md-'}">{ia_blocks block='footer2'}</div>
+						<div class="{width section='footer-blocks' position='footer3' tag='col-md-'}">{ia_blocks block='footer3'}</div>
+						<div class="{width section='footer-blocks' position='footer4' tag='col-md-'}">{ia_blocks block='footer4'}</div>
+					</div>
+				</div>
+			</div>
+		{/if}
+
+		<footer class="footer">
+			<div class="container">
+				{ia_hooker name='smartyFrontBeforeFooterLinks'}
+				
+				<div class="row">
+					<div class="col-md-6">
+						{ia_blocks block='copyright'}
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint accusantium doloremque, numquam, aut, modi similique corporis totam nulla pariatur nesciunt harum mollitia. Qui inventore dolores laboriosam, delectus temporibus deserunt neque?</p>
+					</div>
+					<div class="col-md-6">
+						<div class="social pull-left">
+							<a class="twitter" href="#"><span class="fa fa-twitter"></span></a>
+							<a class="facebook" href="#"><span class="fa fa-facebook"></span></a>
+							<a class="google-plus" href="#"><span class="fa fa-google-plus"></span></a>
+							<a class="youtube" href="#"><span class="fa fa-youtube"></span></a>
+						</div>
+						<div class="copyright pull-right">
+							<p>
+								&copy; {$smarty.server.REQUEST_TIME|date_format:'%Y'} {lang key='powered_by_subrion'}
+							</p>
+							<p>
+								<a class="back-to-top js-back-to-top" href="#"><span class="fa fa-angle-up"></span></a>								
+							</p>
+						</div>
+					</div>
+				</div>
+
+				{ia_hooker name='smartyFrontAfterFooterLinks'}
+			</div>
+		</footer>
+
+		<!-- SYSTEM STUFF -->
+
+		{if $config.cron}
+			<div style="display: none;">
+				<img src="{$core.page.nonProtocolUrl}cron/?{randnum}" width="1" height="1" alt="">
+			</div>
+		{/if}
+
+		{if isset($manageMode)}
+			{include file='visual-mode.tpl'}
+		{/if}
+
+		{if isset($previewMode)}
+			<p>{lang key='youre_in_preview_mode'}</p>
+		{/if}
+
+		{ia_print_js display='on'}
+
+		{ia_hooker name='smartyFrontFinalize'}
+	</body>
+</html>

@@ -1,0 +1,88 @@
+<div class="sec sec-search">
+	<div class="container">
+		<div class="q-search">
+			<div class="q-search__tabs">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#tab_find" data-toggle="tab">{lang key='qsearch_find_a_perfect_car'}</a></li>
+					<li><a href="#tab_makes" data-toggle="tab">{lang key='qsearch_popular_makes'}</a></li>
+					<li><a href="#tab_bodystyle" data-toggle="tab">{lang key='qsearch_bodystyle'}</a></li>
+				</ul>
+				<ul class="nav nav-links">
+					<li><a href="{$packages.autos.url}">{lang key='qsearch_popular'}</a></li>
+					<li><a href="{$packages.autos.url}latest/">{lang key='qsearch_latest'}</a></li>
+					<li><a href="{$packages.autos.url}">{lang key='qsearch_featured'}</a></li>
+				</ul>
+			</div>
+			
+			<div class="tab-content">
+				<div class="tab-pane active" id="tab_find">
+					{if isset($car_blocks_data.search)}
+						<form action="{$smarty.const.IA_URL}search/cars/" method="get">
+							<div class="container-fluid q-search__inputs">
+								<div class="row">
+									<div class="col-md-2">
+										<div class="btn-group btn-group-justified" data-toggle="buttons">
+											<label class="btn btn-primary">
+												<input type="radio" name="auto_type" value="new" autocomplete="off"> <span class="fa fa-check"></span> New
+											</label>
+											<label class="btn btn-primary active">
+												<input type="radio" name="auto_type" value="used" autocomplete="off" checked> <span class="fa fa-check"></span> Used
+											</label>
+										</div>
+									</div>
+									<div class="col-md-2">
+										<select class="form-control js-car-make">
+											<option value="0">{lang key='make'}</option>
+											{foreach $car_blocks_data.search.categories as $item}
+												<option value="{$item.id}"{if isset($smarty.get.fmid) && $smarty.get.fmid == $item.id} selected{/if}>{$item.name}</option>
+											{/foreach}
+										</select>
+									</div>
+									<div class="col-md-2">
+										<div class="q-search__loader"><div class="loader"></div></div>
+										<select name="" id="" class="form-control js-car-model">
+											<option value="1">{lang key='model'}</option>
+										</select>
+									</div>
+									<div class="col-md-2">
+										<input class="form-control" type="text" name="price_from" placeholder="Price min" value="{if isset($smarty.get.price_from)}{$smarty.get.price_from}{else}{/if}">
+									</div>
+									<div class="col-md-2">
+										<input class="form-control" type="text" name="price_to" placeholder="Price max" value="{if isset($smarty.get.price_to)}{$smarty.get.price_to}{else}{/if}">
+									</div>
+									<div class="col-md-2">
+										<button class="btn btn-success btn-block" type="submit">
+											<span class="fa fa-search"></span> {lang key='search'}
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="q-search__more-actions">
+								<label class="checkbox-inline c-checkbox">
+									<input type="checkbox" name="auto_pictures" value="1" checked>
+									<span class="fa fa-square"></span>
+									{lang key='with_pictures_only'}
+								</label>
+								<label class="checkbox-inline c-checkbox">
+									<input type="checkbox" name="sold" value="1"> 
+									<span class="fa fa-square"></span>
+									{lang key='include_sold_listings'}
+								</label>
+							</div>
+							<p class="q-search__info">We have total of <b>2495</b> listings. <a href="#">Get listed</a> to sell your car</p>
+
+							<input type="hidden" name="fmid" value="{if isset($smarty.get.fmid)}{$smarty.get.fmid|intval}{else}0{/if}">
+							<input type="hidden" name="mid" value="{if isset($smarty.get.mid)}{$smarty.get.mid|intval}{else}0{/if}">
+						</form>
+					{/if}
+				</div>
+				<div class="tab-pane" id="tab_makes">
+					{ia_blocks block='popular_makes'}
+				</div>
+				<div class="tab-pane" id="tab_bodystyle">
+					{ia_blocks block='bodystyle'}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

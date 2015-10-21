@@ -1,0 +1,172 @@
+
+//
+// View page
+// --------------------------------------------------
+
+.v-item__header {
+  .clearfix();
+  margin-bottom: 40px;
+
+  h2 {
+    margin: 0;
+    font-size: 26px;
+    line-height: 26px;
+    text-transform: uppercase;
+
+    span {
+      font-weight: bold;
+      color: @brand-dark;
+    }
+  }
+
+  &__price {
+    display: block;
+    font-size: 26px;
+    line-height: 26px;
+    color: @brand-success;
+  }
+
+  &__info {
+    margin-top: 10px;
+
+    &__item {
+      display: inline-block;
+      margin-right: 18px;
+    }
+  }
+}
+
+
+
+//
+// Gallery
+// --------------------------------------------------
+
+.v-item__gallery {
+  
+  &__item {
+    display: none;
+  }
+}
+
+
+
+//
+// Info
+// --------------------------------------------------
+
+.vitem-info {
+
+  &__section {
+    margin-top: 30px;
+
+    > h3 {
+      text-transform: uppercase;
+      font-size: 18px;
+      line-height: 18px;
+      border-bottom: 2px solid #ddd;
+      margin: 0 0 20px;
+      padding: 0 0 6px;
+      font-weight: bold;
+      color: #bbb;
+    }
+
+    + .box {
+      margin-top: 30px;
+    }
+  }
+}
+
+.vitem-table {
+  width: 100%;
+
+  td {
+    padding: 10px 0;
+    vertical-align: top;
+    border-bottom: 1px solid #eee;
+
+    &:first-child {
+      width: 30%;
+      font-weight: bold;
+    }
+  }
+
+  tr:last-child td {
+    border-bottom: 0 none;
+  }
+}
+
+
+
+//
+// Features section
+// --------------------------------------------------
+
+.vitem-features {
+  .clearfix();
+
+  &__item {
+    float: left;
+    width: 260px;
+    margin: 0 20px 10px 0;
+  }
+}
+
+
+
+//
+// Author
+// --------------------------------------------------
+
+.b-author {
+  background: fade(@brand-dark, 20%);
+
+  &__info {
+    .clearfix();
+    background: fade(@brand-dark, 70%);
+    color: #fff;
+    padding: 20px;
+
+    &__ava {
+      float: left;
+      width: 60px;
+      margin-right: 10px;
+    }
+
+    &__name {
+      overflow: hidden;
+      margin-top: 10px;
+
+      a {
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      span {
+        display: block;
+        color: fade(#fff, 50%);
+      }
+    }
+  }
+
+  &__contact {
+    padding: 20px;
+
+    h4 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    input,
+    textarea {
+      border-color: #fff;
+      .box-shadow(none);
+
+      &:focus {
+        border-color: @link-color;
+      }
+    }
+  }
+}

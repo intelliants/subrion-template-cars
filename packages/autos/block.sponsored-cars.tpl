@@ -1,0 +1,71 @@
+{if isset($car_blocks_data.sponsored)}
+	<div class="container">
+		<h2 class="title title--accent">Special offers</h2>
+
+		<div class="owl-carousel ia-carousel">
+			{foreach $car_blocks_data.sponsored as $item}
+				<div class="ia-carousel__item">
+					<div class="ia-card -{$item.status} {if 'hidden' == $item.status}-hidden{/if}">
+
+						{if $item.auto_pictures}
+							<a class="ia-card__image" href="{$item.link}">
+								{printImage imgfile=$item.auto_pictures[0]['path'] title=$item.model}
+								<span class="ia-card__support-info">
+									<span class="pull-left"><span class="fa fa-image"></span> {$item.auto_pictures_num}</span>
+									<span class="pull-right">{$item.date_added|date_format:$config.date_format}</span>
+								</span>
+							</a>
+						{/if}
+
+						<div class="ia-card__content">
+							<div class="ia-card__actions dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-ellipsis-v"></span></a>
+								<ul class="dropdown-menu pull-right">
+									<li><a href="#">Add to wishlist</a></li>
+									<li><a href="#">Add to compare</a></li>
+									<li><a href="#">Report</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Edit</a></li>
+								</ul>
+							</div>
+							<a class="ia-card__title" href="{$item.link}">{$item.model}, {$item.release_year}</a>
+							<p class="ia-card__sub-title">{$item.price}</p>
+							<table class="ia-card__info-table">
+								<tbody>
+									<tr>
+										<td>{lang key='field_auto_type'}</td>
+										<td><div class="wrp"><a href="{$packages.autos.url}condition/{$item.auto_type}/">{lang key="field_auto_type_{$item.auto_type}"}</a></div></td>
+									</tr>
+									<tr>
+										<td>{lang key='field_body_type'}:</td>
+										<td>
+											<div class="wrp">
+												<a href="{$packages.autos.url}body-style/{$item.body_type}/">{lang key="field_body_type_{$item.body_type}"}</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>{lang key='field_exterior_color'}:</td>
+										<td><b>{lang key="field_exterior_color_{$item.exterior_color}"}</b></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			{/foreach}				
+		</div>
+	</div>
+
+	{ia_add_js}
+$(function() {
+	$('.ia-carousel').owlCarousel({
+		items: 4,
+		margin: 10,
+		dots: false,
+		nav: true,
+		navText: ['<span class="fa fa-angle-left"></span>','<span class="fa fa-angle-right"></span>']
+	});
+});
+	{/ia_add_js}
+{/if}
