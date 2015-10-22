@@ -29,25 +29,40 @@
 		<div class="ia-card__actions dropdown">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-ellipsis-v"></span></a>
 			<ul class="dropdown-menu pull-right">
-				<li><a href="#">Add to wishlist</a></li>
-				<li><a href="#">Add to compare</a></li>
-				<li><a href="#">Report</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Edit</a></li>
+				<li>{printFavorites item=$listing itemtype='autos' guests=true}</li>
+				<li><a href="{$listing.link}"><span class="fa fa-automobile"></span> {lang key='car_details'}</a></li>
+				<li>{accountActions item=$listing itemtype='autos'}</li>
 			</ul>
 		</div>
 		<a class="ia-card__title" href="{$listing.link}">{$listing.model}, {$listing.release_year}</a>
 		<p class="ia-card__sub-title">{$listing.price}</p>
+		<div class="ia-car-info">
+			<a class="ia-car-info__icon ia-car-info__icon--body" href="{$listing.link}">{lang key="field_body_type_{$listing.body_type}"}</a>
+			{if $listing.engine}
+				<a class="ia-car-info__icon ia-car-info__icon--engine" href="{$listing.link}">{lang key="field_engine_{$listing.engine}"}{if $listing.engine_type} {lang key="field_engine_type_{$listing.engine_type}"}{/if}{if $listing.engine_size} {$listing.engine_size}{/if}</a>
+			{/if}
+			{if $listing.transmission}
+				<a class="ia-car-info__icon ia-car-info__icon--transmission" href="{$listing.link}">{lang key="field_transmission_{$listing.transmission}"}</a>
+			{/if}
+			{if $listing.mileage}
+				<a class="ia-car-info__icon ia-car-info__icon--mileage" href="{$listing.link}">{$listing.mileage}</a>
+			{/if}
+		</div>
+		
+		{if $listing.additional_info}
+			<p class="ia-car-summary">{$listing.additional_info|escape}</p>
+		{/if}
+
 		<table class="ia-card__info-table">
 			<tbody>
 				<tr>
 					<td>{lang key='field_auto_type'}</td>
-					<td><div class="wrp"><a href="{$packages.autos.url}condition/{$listing.auto_type}/">{lang key="field_auto_type_{$listing.auto_type}"}</a></div></td>
+					<td><div class="text-overflow"><a href="{$packages.autos.url}condition/{$listing.auto_type}/">{lang key="field_auto_type_{$listing.auto_type}"}</a></div></td>
 				</tr>
 				<tr>
 					<td>{lang key='field_body_type'}:</td>
 					<td>
-						<div class="wrp">
+						<div class="text-overflow">
 							<a href="{$packages.autos.url}body-style/{$listing.body_type}/">{lang key="field_body_type_{$listing.body_type}"}</a>
 						</div>
 					</td>

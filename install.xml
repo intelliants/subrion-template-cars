@@ -71,6 +71,8 @@
 		<block position="bodystyle" status="active" pages="index" header="0" classname="panel-clear">auto_body_list</block>
 		<block position="verybottom" status="active" pages="index" header="0" classname="panel-clear">auto_recent</block>
 		<block position="verytop" status="active" pages="index" header="0" classname="panel-clear">auto_sponsored</block>
+		<block position="left" status="active" pages="autos_view" header="0" classname="panel-clear">autos_enquiry_form</block>
+
 
 		<block position="landing" order="99" status="active" sticky="0" pages="index" header="0" classname="panel-clear">latest_news</block>
 		<block status="active" pages="search,search_autos,autos_index" classname="box--border">filters</block>
@@ -203,6 +205,8 @@
 		<phrase category="frontend" key="login_sign_up">Login / Sign up</phrase>
 		<phrase category="frontend" key="sell_car">Sell a car</phrase>
 		<phrase category="frontend" key="wishlist">Wishlist</phrase>
+		<phrase category="frontend" key="add_to_wishlist">Add to wishlist</phrase>
+		<phrase category="frontend" key="remove_from_wishlist">Remove from wishlist</phrase>
 		<phrase category="frontend" key="compare">Compare</phrase>
 		<phrase category="frontend" key="qsearch_find_a_perfect_car">Find a perfect car</phrase>
 		<phrase category="frontend" key="qsearch_popular">Popular</phrase>
@@ -212,5 +216,7 @@
 		<phrase category="frontend" key="qsearch_bodystyle">Bodystyle</phrase>
 		<phrase category="frontend" key="more_makes">Show more makes</phrase>
 		<phrase category="frontend" key="less_makes">Show less makes</phrase>
+		<phrase category="frontend" key="car_details">Car details</phrase>
+		<phrase category="frontend" key="added_on">added on</phrase>
 	</phrases>
 </template>

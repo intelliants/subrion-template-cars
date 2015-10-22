@@ -21,11 +21,9 @@
 								<div class="ia-card__actions dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-ellipsis-v"></span></a>
 									<ul class="dropdown-menu pull-right">
-										<li><a href="#">Add to wishlist</a></li>
-										<li><a href="#">Add to compare</a></li>
-										<li><a href="#">Report</a></li>
-										<li class="divider"></li>
-										<li><a href="#">Edit</a></li>
+										<li>{printFavorites item=$listing itemtype='autos' guests=true}</li>
+										<li><a href="{$listing.link}"><span class="fa fa-automobile"></span> {lang key='car_details'}</a></li>
+										<li>{accountActions item=$listing itemtype='autos'}</li>
 									</ul>
 								</div>
 								<a class="ia-card__title" href="{$item.link}">{$item.model}, {$item.release_year}</a>

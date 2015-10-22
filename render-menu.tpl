@@ -5,8 +5,8 @@
 {elseif 'account' == $position}
 	{if 'account' == $menu.name && $member && $config.members_enabled}
 		<ul class="nav navbar-nav navbar-right nav-account">
-			<li><a class="navbar-btn-wishlist" href="#"><span class="fa fa-star"></span> {lang key='wishlist'}</a></li>
-			<li><a class="navbar-btn-compare" href="#"><span class="fa fa-sort-amount-desc"></span> {lang key='compare'}</a></li>
+			<li><a class="navbar-btn-wishlist" href="{$smarty.const.IA_URL}favorites/"><span class="fa fa-star"></span> {lang key='wishlist'}</a></li>
+			<!-- <li><a class="navbar-btn-compare" href="#"><span class="fa fa-sort-amount-desc"></span> {lang key='compare'}</a></li> -->
 			<li class="dropdown">
 				<a href="#" class="navbar-btn-login dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 					{printImage imgfile=$member.avatar title=$member.fullname|default:$member.username class='img-circle' gravatar=true email=$member.email width=30}
@@ -21,8 +21,8 @@
 		</ul>
 	{else}
 		<ul class="nav navbar-nav navbar-right nav-account">
-			<li><a class="navbar-btn-wishlist" href="#"><span class="fa fa-star"></span> {lang key='wishlist'}</a></li>
-			<li><a class="navbar-btn-compare" href="#"><span class="fa fa-sort-amount-desc"></span> {lang key='compare'}</a></li>
+			<li><a class="navbar-btn-wishlist" href="{$smarty.const.IA_URL}favorites/"><span class="fa fa-star"></span> {lang key='wishlist'}</a></li>
+			<!-- <li><a class="navbar-btn-compare" href="#"><span class="fa fa-sort-amount-desc"></span> {lang key='compare'}</a></li> -->
 			<li><a data-toggle="modal" data-target="#loginModal" href="#" class="navbar-btn-login"><span class="fa fa-user"></span> <span class="-guest">{lang key='login_sign_up'}</span></a></li>
 			<li><a class="navbar-btn-accent" href="{$packages.autos.url}add/"><span class="fa fa-car"></span> {lang key='sell_car'}</a></li>
 		</ul>
