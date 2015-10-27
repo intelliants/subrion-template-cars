@@ -12,7 +12,7 @@
 								{printImage imgfile=$item.auto_pictures[0]['path'] title=$item.model}
 								<span class="ia-card__support-info">
 									<span class="pull-left"><span class="fa fa-image"></span> {$item.auto_pictures_num}</span>
-									<span class="pull-right">{$item.date_added|date_format:$config.date_format}</span>
+									<span class="pull-right">{$item.date_added|date_format:$core.config.date_format}</span>
 								</span>
 							</a>
 						{/if}
@@ -21,9 +21,9 @@
 							<div class="ia-card__actions dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-ellipsis-v"></span></a>
 								<ul class="dropdown-menu pull-right">
-									<li>{printFavorites item=$listing itemtype='autos' guests=true}</li>
-									<li><a href="{$listing.link}"><span class="fa fa-automobile"></span> {lang key='car_details'}</a></li>
-									<li>{accountActions item=$listing itemtype='autos'}</li>
+									<li>{printFavorites item=$item itemtype='autos' guests=true}</li>
+									<li><a href="{$item.link}"><span class="fa fa-automobile"></span> {lang key='car_details'}</a></li>
+									<li>{accountActions item=$item itemtype='autos'}</li>
 								</ul>
 							</div>
 							<a class="ia-card__title" href="{$item.link}">{$item.model}, {$item.release_year}</a>
@@ -32,13 +32,13 @@
 								<tbody>
 									<tr>
 										<td>{lang key='field_auto_type'}</td>
-										<td><div class="wrp"><a href="{$packages.autos.url}condition/{$item.auto_type}/">{lang key="field_auto_type_{$item.auto_type}"}</a></div></td>
+										<td><div class="wrp"><a href="{$core.packages.autos.url}condition/{$item.auto_type}/">{lang key="field_auto_type_{$item.auto_type}"}</a></div></td>
 									</tr>
 									<tr>
 										<td>{lang key='field_body_type'}:</td>
 										<td>
 											<div class="wrp">
-												<a href="{$packages.autos.url}body-style/{$item.body_type}/">{lang key="field_body_type_{$item.body_type}"}</a>
+												<a href="{$core.packages.autos.url}body-style/{$item.body_type}/">{lang key="field_body_type_{$item.body_type}"}</a>
 											</div>
 										</td>
 									</tr>

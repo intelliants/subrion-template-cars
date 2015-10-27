@@ -25,9 +25,9 @@
 				<h2><span>{$item.model}, {$item.release_year}</span></h2>
 				<div class="v-item__header__price">{$item.price}</div>
 				<div class="v-item-header__info">
-					<span class="v-item__header__info__item">{lang key='field_auto_type'}: <a href="{$packages.autos.url}condition/{$item.auto_type}/"><b>{lang key="field_auto_type_{$item.auto_type}"}</b></a></span>
+					<span class="v-item__header__info__item">{lang key='field_auto_type'}: <a href="{$core.packages.autos.url}condition/{$item.auto_type}/"><b>{lang key="field_auto_type_{$item.auto_type}"}</b></a></span>
 					<span class="v-item__header__info__item"><span class="fa fa-eye"></span> {$item.views_num}</span>
-					<span class="v-item__header__info__item">{lang key='added_on'} {$item.date_added|date_format:$config.date_format}</b></span>
+					<span class="v-item__header__info__item">{lang key='added_on'} {$item.date_added|date_format:$core.config.date_format}</b></span>
 				</div>
 				<div class="ia-car-info ia-car-info--block">
 					<span class="ia-car-info__icon ia-car-info__icon--body">{lang key='field_body_type'}: <b>{lang key="field_body_type_{$item.body_type}"}</b></span>

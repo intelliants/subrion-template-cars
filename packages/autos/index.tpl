@@ -9,7 +9,7 @@
 {if isset($models) && $models}
 	{ia_block title={lang key='autos_models'} style='fixed' id='auto_categories'}
 		<div class="ia-categories">
-			{include file='ia-categories.tpl' categories=$models item='autos_models' show_amount=true num_columns=$config.autos_model_columns}
+			{include file='ia-categories.tpl' categories=$models item='autos_models' show_amount=true num_columns=$core.config.autos_model_columns}
 		</div>
 	{/ia_block}
 {/if}

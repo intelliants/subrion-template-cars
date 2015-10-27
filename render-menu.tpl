@@ -3,7 +3,7 @@
 {elseif 'inventory' == $position}
 	{ia_menu menus=$menu.contents class="nav navbar-nav navbar-right nav-inventory {$menu.classname}" loginout=true}
 {elseif 'account' == $position}
-	{if 'account' == $menu.name && $member && $config.members_enabled}
+	{if 'account' == $menu.name && $member && $core.config.members_enabled}
 		<ul class="nav navbar-nav navbar-right nav-account">
 			<li><a class="navbar-btn-wishlist" href="{$smarty.const.IA_URL}favorites/"><span class="fa fa-star"></span> {lang key='wishlist'}</a></li>
 			<!-- <li><a class="navbar-btn-compare" href="#"><span class="fa fa-sort-amount-desc"></span> {lang key='compare'}</a></li> -->
@@ -17,14 +17,14 @@
 				{ia_hooker name='smartyFrontInsideAccountBox'}
 				{ia_menu menus=$menu.contents class='dropdown-menu' loginout=true}
 			</li>
-			<li><a class="navbar-btn-accent" href="{$packages.autos.url}add/"><span class="fa fa-car"></span> {lang key='sell_car'}</a></li>
+			<li><a class="navbar-btn-accent" href="{$core.packages.autos.url}add/"><span class="fa fa-car"></span> {lang key='sell_car'}</a></li>
 		</ul>
 	{else}
 		<ul class="nav navbar-nav navbar-right nav-account">
 			<li><a class="navbar-btn-wishlist" href="{$smarty.const.IA_URL}favorites/"><span class="fa fa-star"></span> {lang key='wishlist'}</a></li>
 			<!-- <li><a class="navbar-btn-compare" href="#"><span class="fa fa-sort-amount-desc"></span> {lang key='compare'}</a></li> -->
 			<li><a data-toggle="modal" data-target="#loginModal" href="#" class="navbar-btn-login"><span class="fa fa-user"></span> <span class="-guest">{lang key='login_sign_up'}</span></a></li>
-			<li><a class="navbar-btn-accent" href="{$packages.autos.url}add/"><span class="fa fa-car"></span> {lang key='sell_car'}</a></li>
+			<li><a class="navbar-btn-accent" href="{$core.packages.autos.url}add/"><span class="fa fa-car"></span> {lang key='sell_car'}</a></li>
 		</ul>
 
 		<div class="modal fade" id="loginModal">

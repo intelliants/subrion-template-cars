@@ -12,7 +12,7 @@
 									{printImage imgfile=$entry.image|default:'' fullimage=true title=$entry.title class='img-responsive'}
 								</a>
 								<h5 class="media-heading"><a href="{$smarty.const.IA_URL}news/{$entry.id}-{$entry.alias}">{$entry.title}</a></h5>
-								<p class="ia-item-date">{$entry.body|strip_tags|truncate:$config.news_max_block:'...'}</p>
+								<p class="ia-item-date">{$entry.body|strip_tags|truncate:$core.config.news_max_block:'...'}</p>
 							</div>
 						{/if}
 					{/foreach}
@@ -25,7 +25,7 @@
 									{printImage imgfile=$entry.image|default:'' title=$entry.title class='img-responsive'}
 								</a>
 								<h5 class="media-heading"><a href="{$smarty.const.IA_URL}news/{$entry.id}-{$entry.alias}">{$entry.title}</a></h5>
-								<p class="ia-item-date">{$entry.body|strip_tags|truncate:$config.news_max_block:'...'}</p>
+								<p class="ia-item-date">{$entry.body|strip_tags|truncate:$core.config.news_max_block:'...'}</p>
 							</div>
 						{/if}
 					{/foreach}

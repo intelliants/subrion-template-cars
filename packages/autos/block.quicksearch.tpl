@@ -8,9 +8,9 @@
 					<li><a href="#tab_bodystyle" data-toggle="tab">{lang key='qsearch_bodystyle'}</a></li>
 				</ul>
 				<ul class="nav nav-links">
-					<li><a href="{$packages.autos.url}">{lang key='qsearch_popular'}</a></li>
-					<li><a href="{$packages.autos.url}latest/">{lang key='qsearch_latest'}</a></li>
-					<li><a href="{$packages.autos.url}">{lang key='qsearch_featured'}</a></li>
+					<li><a href="{$core.packages.autos.url}">{lang key='qsearch_popular'}</a></li>
+					<li><a href="{$core.packages.autos.url}latest/">{lang key='qsearch_latest'}</a></li>
+					<li><a href="{$core.packages.autos.url}">{lang key='qsearch_featured'}</a></li>
 				</ul>
 			</div>
 			
@@ -69,7 +69,7 @@
 									{lang key='include_sold_listings'}
 								</label>
 							</div>
-							<p class="q-search__info">We have total of <b>2495</b> listings. <a href="#">Get listed</a> to sell your car</p>
+							<p class="q-search__info">We have total of <b>{$num_autos}</b> listings. <a href="{$core.packages.autos.url}add/">Get listed</a> to sell your car</p>
 
 							<input type="hidden" name="fmid" value="{if isset($smarty.get.fmid)}{$smarty.get.fmid|intval}{else}0{/if}">
 							<input type="hidden" name="mid" value="{if isset($smarty.get.mid)}{$smarty.get.mid|intval}{else}0{/if}">

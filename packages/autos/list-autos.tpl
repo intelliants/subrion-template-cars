@@ -5,7 +5,7 @@
 			{printImage imgfile=$listing.auto_pictures[0]['path'] title=$listing.model}
 			<span class="ia-card__support-info">
 				<span class="pull-left"><span class="fa fa-image"></span> {$listing.auto_pictures_num}</span>
-				<span class="pull-right">{$listing.date_added|date_format:$config.date_format}</span>
+				<span class="pull-right">{$listing.date_added|date_format:$core.config.date_format}</span>
 			</span>
 		</a>
 
@@ -57,13 +57,13 @@
 			<tbody>
 				<tr>
 					<td>{lang key='field_auto_type'}</td>
-					<td><div class="text-overflow"><a href="{$packages.autos.url}condition/{$listing.auto_type}/">{lang key="field_auto_type_{$listing.auto_type}"}</a></div></td>
+					<td><div class="text-overflow"><a href="{$core.packages.autos.url}condition/{$listing.auto_type}/">{lang key="field_auto_type_{$listing.auto_type}"}</a></div></td>
 				</tr>
 				<tr>
 					<td>{lang key='field_body_type'}:</td>
 					<td>
 						<div class="text-overflow">
-							<a href="{$packages.autos.url}body-style/{$listing.body_type}/">{lang key="field_body_type_{$listing.body_type}"}</a>
+							<a href="{$core.packages.autos.url}body-style/{$listing.body_type}/">{lang key="field_body_type_{$listing.body_type}"}</a>
 						</div>
 					</td>
 				</tr>
@@ -90,11 +90,11 @@
 		</div>
 		
 		{if $listing.price}
-			<div class="ia-item__tag"><span class="fa fa-tag"></span> {$config.currency} {$listing.price}</div>
+			<div class="ia-item__tag"><span class="fa fa-tag"></span> {$core.config.currency} {$listing.price}</div>
 		{/if}
 
 		<ul class="ia-list-items">
-			<li><span class="muted">{lang key='field_body_type'}</span>: <a href="{$packages.autos.url}body-style/{$listing.body_type}/">{lang key="field_body_type_{$listing.body_type}"}</a></li>
+			<li><span class="muted">{lang key='field_body_type'}</span>: <a href="{$core.packages.autos.url}body-style/{$listing.body_type}/">{lang key="field_body_type_{$listing.body_type}"}</a></li>
 			<li><span class="muted">{lang key='field_interior_color'}</span>: {lang key="field_interior_color_{$listing.interior_color}"}</li>
 			<li><span class="muted">{lang key='field_engine'}</span>: {$listing.engine_size} cc / {$listing.horse_power} HP</li>
 			{if $listing.mileage}
@@ -131,11 +131,11 @@
 	</div>
 
 	{if $listing.price}
-		<span class="label label-info">{$config.currency} {$listing.price}</span>
+		<span class="label label-info">{$core.config.currency} {$listing.price}</span>
 	{/if}
 
 	<ul class="ia-list-items">
-		<li><span class="muted">{lang key='field_body_type'}</span>: <a href="{$packages.autos.url}body-style/{$listing.body_type}/">{lang key="field_body_type_{$listing.body_type}"}</a></li>
+		<li><span class="muted">{lang key='field_body_type'}</span>: <a href="{$core.packages.autos.url}body-style/{$listing.body_type}/">{lang key="field_body_type_{$listing.body_type}"}</a></li>
 		<li><span class="muted">{lang key='field_interior_color'}</span>: {lang key="field_interior_color_{$listing.interior_color}"}</li>
 		<li><span class="muted">{lang key='field_engine'}</span>: {$listing.engine_size} cc / {$listing.horse_power} HP</li>
 		{if $listing.mileage}

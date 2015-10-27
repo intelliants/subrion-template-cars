@@ -9,7 +9,7 @@
 		<meta name="description" content="{$core.page['meta-description']}">
 		<meta name="keywords" content="{$core.page['meta-keywords']}">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="generator" content="Subrion CMS {$config.version} - Open Source Content Management System">
+		<meta name="generator" content="Subrion CMS {$core.config.version} - Open Source Content Management System">
 		<meta name="robots" content="index">
 		<meta name="robots" content="follow">
 		<meta name="revisit-after" content="1 day">
@@ -39,8 +39,8 @@
 		{/ia_add_js}
 	</head>
 
-	<body class="page-{$core.page.name}{if $config.fixed_navbar} -fixed-navbar{/if}">
-		<nav class="navbar navbar-default {if $config.fixed_navbar}navbar-fixed-top{/if}">
+	<body class="page-{$core.page.name}{if $core.config.fixed_navbar} -fixed-navbar{/if}">
+		<nav class="navbar navbar-default {if $core.config.fixed_navbar}navbar-fixed-top{/if}">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -51,8 +51,8 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand" href="{$smarty.const.IA_URL}">
-						{if !empty($config.site_logo)}
-							<img src="{$core.page.nonProtocolUrl}uploads/{$config.site_logo}" alt="{$config.site}">
+						{if !empty($core.config.site_logo)}
+							<img src="{$core.page.nonProtocolUrl}uploads/{$core.config.site_logo}" alt="{$core.config.site}">
 						{else}
 							<span>Cars</span>
 						{/if}
@@ -68,7 +68,7 @@
 		</nav>
 
 		{if 'index' == $core.page.name}
-			<header class="header"{if $config.website_bg} style="background-image: url('{$smarty.const.IA_URL}uploads/{$config.website_bg}');"{/if}>
+			<header class="header"{if $core.config.website_bg} style="background-image: url('{$smarty.const.IA_URL}uploads/{$core.config.website_bg}');"{/if}>
 				{*ia_blocks block='teaser'*}
 			</header>
 		{/if}
@@ -171,7 +171,7 @@
 
 		<!-- SYSTEM STUFF -->
 
-		{if $config.cron}
+		{if $core.config.cron}
 			<div style="display: none;">
 				<img src="{$core.page.nonProtocolUrl}cron/?{randnum}" width="1" height="1" alt="">
 			</div>
