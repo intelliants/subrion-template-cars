@@ -101,24 +101,24 @@
 
 								{ia_blocks block='top'}
 
-								<div class="content__header">
-									{if 'autos_view' != $core.page.name}
+								{if 'autos_view' != $core.page.name}
+									<div class="content__header">
 										<h1 class="page-header">{$core.page.title}</h1>
-									{/if}
-									<ul class="content__actions">
-										{foreach $core.actions as $name => $action}
-											<li>
-												{if 'action-favorites' == $name}
-													{printFavorites item=$item itemtype=$item.item}
-												{else}
-													<a {foreach $action.attributes as $key => $value}{$key}="{$value}" {/foreach}>
-														<span class="fa fa-{$name}" title="{$action.title}"></span>
-													</a>
-												{/if}
-											</li>
-										{/foreach}
-									</ul>
-								</div>
+										<ul class="content__actions">
+											{foreach $core.actions as $name => $action}
+												<li>
+													{if 'action-favorites' == $name}
+														{printFavorites item=$item itemtype=$item.item}
+													{else}
+														<a {foreach $action.attributes as $key => $value}{$key}="{$value}" {/foreach}>
+															<span class="fa fa-{$name}" title="{$action.title}"></span>
+														</a>
+													{/if}
+												</li>
+											{/foreach}
+										</ul>
+									</div>
+								{/if}
 
 								{ia_hooker name='smartyFrontBeforeMainContent'}
 

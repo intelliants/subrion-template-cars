@@ -41,6 +41,19 @@
 						<span class="ia-car-info__icon ia-car-info__icon--mileage">{lang key='field_mileage'}: <b>{$item.mileage}</b></span>
 					{/if}
 				</div>
+				<ul class="content__actions">
+					{foreach $core.actions as $name => $action}
+						<li>
+							{if 'action-favorites' == $name}
+								{printFavorites item=$item itemtype=$item.item}
+							{else}
+								<a {foreach $action.attributes as $key => $value}{$key}="{$value}" {/foreach}>
+									<span class="fa fa-{$name}" title="{$action.title}"></span>
+								</a>
+							{/if}
+						</li>
+					{/foreach}
+				</ul>
 			</div>
 		</div>
 	</div>
