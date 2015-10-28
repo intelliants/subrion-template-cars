@@ -44,7 +44,9 @@
 									</tr>
 									<tr>
 										<td>{lang key='field_exterior_color'}:</td>
-										<td><b>{lang key="field_exterior_color_{$item.exterior_color}"}</b></td>
+										<td>
+											<b>{lang key="field_exterior_color_{$item.exterior_color}"}</b>
+										</td>
 									</tr>
 								</tbody>
 							</table>
