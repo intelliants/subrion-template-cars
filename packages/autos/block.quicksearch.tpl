@@ -8,9 +8,9 @@
 					<li><a href="#tab_bodystyle" data-toggle="tab">{lang key='qsearch_bodystyle'}</a></li>
 				</ul>
 				<ul class="nav nav-links">
-					<li><a href="{$core.packages.autos.url}">{lang key='qsearch_popular'}</a></li>
+					<li><a href="{$core.packages.autos.url}popular/">{lang key='qsearch_popular'}</a></li>
 					<li><a href="{$core.packages.autos.url}latest/">{lang key='qsearch_latest'}</a></li>
-					<li><a href="{$core.packages.autos.url}">{lang key='qsearch_featured'}</a></li>
+					<li><a href="{$core.packages.autos.url}featured/">{lang key='qsearch_featured'}</a></li>
 				</ul>
 			</div>
 			

@@ -91,16 +91,10 @@
 			<div class="content">
 				<div class="container">
 					<div class="row">
-						{*
 						<div class="{width section='content' position='left' tag='col-md-'}{if 'autos_view' == $core.page.name} col-md-push-9{/if}">
 							{ia_blocks block='left'}
 						</div>
 						<div class="{width section='content' position='center' tag='col-md-'}{if 'autos_view' == $core.page.name} col-md-pull-3{/if}">
-						*}
-						<div class="{width section='content' position='left' tag='col-md-'}">
-							{ia_blocks block='left'}
-						</div>
-						<div class="{width section='content' position='center' tag='col-md-'}">
 							<div class="content__wrap">
 								{ia_hooker name='smartyFrontBeforeNotifications'}
 								{include file='notification.tpl'}

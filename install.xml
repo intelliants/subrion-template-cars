@@ -67,16 +67,18 @@
 		<menu position="account" status="active">account</menu>
 		<menu position="left" status="inactive">autos</menu>
 
-		<block position="verytop" status="active" pages="index" header="0" classname="panel-clear">autos_search</block>
-		<block position="popular_makes" status="active" pages="index" header="0" classname="panel-clear">auto_make_list</block>
-		<block position="bodystyle" status="active" pages="index" header="0" classname="panel-clear">auto_body_list</block>
-		<block position="verybottom" status="active" pages="index" header="0" classname="panel-clear">auto_recent</block>
-		<block position="verytop" status="active" pages="index" header="0" classname="panel-clear">auto_sponsored</block>
-		<block position="left" status="active" pages="autos_view" header="0" classname="panel-clear">autos_enquiry_form</block>
-		<block position="left" order="-1" status="active" pages="autos_view" header="0" classname="panel-clear">autos_author</block>
+		<block position="verytop" status="active" pages="index" header="0">autos_search</block>
+		<block position="popular_makes" status="active" pages="index" header="0">auto_make_list</block>
+		<block position="bodystyle" status="active" pages="index" header="0">auto_body_list</block>
+		<block position="verybottom" status="active" pages="index" header="0">auto_recent</block>
+		<block position="verytop" status="active" pages="index" header="0">auto_sponsored</block>
+		<block position="left" status="active" pages="autos_view" header="0" order="2">autos_enquiry_form</block>
+		<block position="left" order="-1" status="active" pages="autos_view" header="0">autos_author</block>
+		<block position="left" header="0" status="active" pages="autos_index,autos_index_latest,autos_view,autos_index_featured,autos_index_popular,autos_index_random,search_autos,autos_models" order="1">autos_tools</block>
+		<block position="left" classname="box--featured" status="active" pages="autos_index,autos_index_latest,autos_view,autos_index_featured,autos_index_popular,autos_index_random,search_autos,autos_models" order="5">auto_featured</block>
+		<block position="left" status="active" pages="autos_index,autos_index_latest,autos_index_featured,autos_index_popular,autos_index_random,search_autos,autos_models" order="99">auto_random</block>
 
-
-		<block position="landing" order="99" status="active" sticky="0" pages="index" header="0" classname="panel-clear">latest_news</block>
+		<block position="landing" order="99" status="active" sticky="0" pages="index" header="0">latest_news</block>
 		<block status="active" pages="search,search_autos,autos_index" classname="box--border">filters</block>
 
 		<block status="inactive" position="left" classname="box--border">common_statistics</block>
@@ -92,7 +94,7 @@
 			   title="Benefits" 
 			   position="landing" 
 			   header="0"
-			   classname="panel-clear"
+			  
 			   collapsible="0" 
 			   sticky="0"
 			   pages="index" 
@@ -142,11 +144,10 @@
 			   type="smarty">
 			<![CDATA[
 <ul class="nav nav-links">
-	<li><a href="#">Used cars for sale</a></li>
-	<li><a href="#">Second hand cars for sale</a></li>
-	<li><a href="#">New cars for sale</a></li>
-	<li><a href="#">Special Offers</a></li>
-	<li><a href="#">Compare Cars</a></li>
+	<li><a href="{$searchPageUrl}condition:used/">Used cars for sale</a></li>
+	<li><a href="{$searchPageUrl}condition:used/">Second hand cars for sale</a></li>
+	<li><a href="{$searchPageUrl}condition:new/">New cars for sale</a></li>
+	<li><a href="{$core.packages.autos.url}featured/">Special Offers</a></li>
 </ul>
 			]]>
 		</block>
@@ -160,12 +161,10 @@
 			   type="smarty">
 			<![CDATA[
 <ul class="nav nav-links">
-	<li><a href="#">Research Cars</a></li>
-	<li><a href="#">Car Valuations</a></li>
-	<li><a href="#">Car Finance</a></li>
-	<li><a href="#">Car Insurance</a></li>
-	<li><a href="#">Car Comparisons</a></li>
-	<li><a href="#">Help Me Choose</a></li>
+	<li><a href="{$core.packages.autos.url}popular/">Popular cars for sale</a></li>
+	<li><a href="{$core.packages.autos.url}latest/">Latest cars for sale</a></li>
+	<li><a href="{$core.packages.autos.url}">Car Finance</a></li>
+	<li><a href="{$core.packages.autos.url}">Car Insurance</a></li>
 </ul>
 			]]>
 		</block>
