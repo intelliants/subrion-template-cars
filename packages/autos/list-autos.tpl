@@ -1,9 +1,13 @@
-<div class="ia-card -{$listing.status} {if 'hidden' == $listing.status}-hidden{/if} {if $listing.featured}-featured{/if} {if $listing.sponsored}-sponsored{/if}">
+<div class="ia-card ia-item--{$listing.status} {if 'hidden' == $listing.status}-hidden{/if} {if $listing.featured}-featured{/if} {if $listing.sponsored}-sponsored{/if}">
 	{if $listing.featured}
 		<div class="ia-card__badge ia-card__badge--featured" title="{lang key='featured'}"><span class="fa fa-star"></span></div>
 	{/if}
 	{if $listing.sponsored}
 		<div class="ia-card__badge ia-card__badge--sponsored" title="{lang key='sponsored'}"><span class="fa fa-usd"></span></div>
+	{/if}
+
+	{if $member && $member.id == $listing.member_id && 'active' != $listing.status}
+		<span class="label label-status label-{$listing.status}" title="{lang key=$listing.status default=$listing.status}"><span class="fa fa-warning"></span> {lang key=$listing.status default=$listing.status}</span>
 	{/if}
 
 	{if $listing.auto_pictures}
