@@ -55,7 +55,7 @@
 				<a class="ia-car-info__icon ia-car-info__icon--mileage" href="{$listing.link}">{$listing.mileage}</a>
 			{/if}
 		</div>
-		
+
 		{if $listing.additional_info}
 			<p class="ia-car-summary">{$listing.additional_info|escape|truncate:350:'...':true}</p>
 		{/if}
@@ -64,13 +64,13 @@
 			<tbody>
 				<tr>
 					<td>{lang key='field_condition'}</td>
-					<td><div class="text-overflow"><a href="{$core.packages.autos.url}condition/{$listing.condition}/">{lang key="field_condition_{$listing.condition}"}</a></div></td>
+					<td><div class="text-overflow"><a href="{$smarty.const.IA_URL}search/cars/condition:{$listing.condition}/">{lang key="field_condition_{$listing.condition}"}</a></div></td>
 				</tr>
 				<tr>
 					<td>{lang key='field_body_type'}:</td>
 					<td>
 						<div class="text-overflow">
-							<a href="{$core.packages.autos.url}body-style/{$listing.body_type}/">{lang key="field_body_type_{$listing.body_type}"}</a>
+							<a href="{$smarty.const.IA_URL}search/cars/body:{$listing.body_type}/">{lang key="field_body_type_{$listing.body_type}"}</a>
 						</div>
 					</td>
 				</tr>

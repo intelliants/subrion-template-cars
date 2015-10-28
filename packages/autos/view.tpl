@@ -16,7 +16,7 @@
 						{/foreach}
 					</div>
 				</div>
-			{/if}		
+			{/if}
 		</div>
 		<div class="col-md-6">
 			<div class="v-item__header">
@@ -25,7 +25,7 @@
 				<h2><span>{$item.model}, {$item.release_year}</span></h2>
 				<div class="v-item__header__price">{$item.price}</div>
 				<div class="v-item-header__info">
-					<span class="v-item__header__info__item">{lang key='field_condition'}: <a href="{$core.packages.autos.url}condition/{$item.condition}/"><b>{lang key="field_condition_{$item.condition}"}</b></a></span>
+					<span class="v-item__header__info__item">{lang key='field_condition'}: <a href="{$searchPageUrl}condition:{$item.condition}/"><b>{lang key="field_condition_{$item.condition}"}</b></a></span>
 					<span class="v-item__header__info__item"><span class="fa fa-eye"></span> {$item.views_num}</span>
 					<span class="v-item__header__info__item">{lang key='added_on'} {$item.date_added|date_format:$core.config.date_format}</b></span>
 				</div>
@@ -117,7 +117,7 @@
 							{if $item.vin_code}
 								<tr>
 									<td>{lang key='field_vin_code'}</td>
-									<td>{$item.vin_code}</td>
+									<td>{$item.vin_code|escape:'html'}</td>
 								</tr>
 							{/if}
 							{if $item.fuel_type}
