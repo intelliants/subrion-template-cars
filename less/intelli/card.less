@@ -441,3 +441,75 @@
 		width: 300%;
 	}
 }
+
+
+
+//
+// Featured items
+// --------------------------------------------------
+
+.ia-item.-with-bg {
+	position: relative;
+	height: 150px;
+	overflow: hidden;
+
+	.ia-item__image {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+		max-width: none;
+		margin: 0;
+
+		img {
+		  position: absolute;
+		  width: 300px !important;
+		  max-width: none;
+		  height: 300px;
+		  top: 50%;
+		  left: 50%;
+		  margin-top: -150px;
+		  margin-left: -150px;
+		  .transition(all .1s ease-in-out);
+		}
+	}
+
+	.ia-item__content {
+		z-index: 2;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		background: rgba(0,0,0,0.6);
+		padding: 20px;
+		font-size: 14px;
+		line-height: 16px;
+		.transition(all .2s ease);
+
+		&:hover {
+		  background: rgba(0,0,0,0.9);
+		}
+
+		a {
+		  color: #fff;
+
+		  &:hover {
+		  	color: #fff;
+		  }
+		}
+
+		p {
+			color: fade(#fff, 70%);
+		}
+	}
+
+	.ia-item__price {
+		font-weight: bold;
+		color: @brand-success !important;
+		margin: 0;
+	}
+
+}
