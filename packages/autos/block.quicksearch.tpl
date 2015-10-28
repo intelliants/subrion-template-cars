@@ -34,12 +34,12 @@
 										<select class="form-control js-car-make" name="mk">
 											<option value="">{lang key='make'}</option>
 											{foreach $car_blocks_data.search.categories as $item}
-												<option value="{$item.id}"{if isset($smarty.get.mk) && $smarty.get.mk == $item.id} selected{/if}>{$item.name}</option>
+												<option value="{$item.id}"{if isset($smarty.get.mk) && $smarty.get.mk == $item.id} selected{/if}>{$item.name|escape:'html'}</option>
 											{/foreach}
 										</select>
 									</div>
 									<div class="col-md-2">
-										<div class="q-search__loader"><div class="loader"></div></div>
+										<!--<div class="q-search__loader"><div class="loader"></div></div>-->
 										<select name="md" class="form-control js-car-model">
 											<option value="">{lang key='model'}</option>
 										</select>
@@ -70,9 +70,6 @@
 								</label>
 							</div>
 							<p class="q-search__info">We have total of <b>{$num_autos}</b> listings. <a href="{$core.packages.autos.url}add/">Get listed</a> to sell your car</p>
-
-							<input type="hidden" name="mk" value="{if isset($smarty.get.mk)}{$smarty.get.mk|intval}{else}0{/if}">
-							<input type="hidden" name="md" value="{if isset($smarty.get.md)}{$smarty.get.md|intval}{else}0{/if}">
 						</form>
 					{/if}
 				</div>
@@ -86,3 +83,4 @@
 		</div>
 	</div>
 </div>
+{ia_print_js files='_IA_URL_packages/autos/js/front/search'}
