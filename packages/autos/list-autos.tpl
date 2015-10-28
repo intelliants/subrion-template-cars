@@ -1,4 +1,11 @@
 <div class="ia-card -{$listing.status} {if 'hidden' == $listing.status}-hidden{/if} {if $listing.featured}-featured{/if} {if $listing.sponsored}-sponsored{/if}">
+	{if $listing.featured}
+		<div class="ia-card__badge ia-card__badge--featured" title="{lang key='featured'}"><span class="fa fa-star"></span></div>
+	{/if}
+	{if $listing.sponsored}
+		<div class="ia-card__badge ia-card__badge--sponsored" title="{lang key='sponsored'}"><span class="fa fa-usd"></span></div>
+	{/if}
+
 	{if $listing.auto_pictures}
 		<a class="ia-card__image" href="{$listing.link}">
 			{printImage imgfile=$listing.auto_pictures[0]['path'] title=$listing.model}
@@ -33,12 +40,7 @@
 				<li>{accountActions item=$listing itemtype='autos'}</li>
 			</ul>
 		</div>
-		{if $listing.featured}
-			<div class="ia-card__badge ia-card__badge--featured">{lang key='featured'}</div>
-		{/if}
-		{if $listing.sponsored}
-			<div class="ia-card__badge ia-card__badge--sponsored"><span class="fa fa-star"></span> {lang key='sponsored'}</div>
-		{/if}
+		
 		<a class="ia-card__title" href="{$listing.link}">{$listing.model}, {$listing.release_year}</a>
 		<p class="ia-card__sub-title">{$listing.price}</p>
 		<div class="ia-car-info">
