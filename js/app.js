@@ -30,8 +30,8 @@ $(function() {
 
 	$modelSelect = $('.js-car-model'),
 	$loader = $('.q-search__loader'),
-	$fmid  = $('input[name="fmid"]'),
-	$mid  = $('input[name="mid"]');
+	$fmid  = $('input[name="mk"]'),
+	$mid  = $('input[name="md"]');
 	$defaultmid = $mid.val();
 
 	$('.js-car-make').on('change', function(e, state)

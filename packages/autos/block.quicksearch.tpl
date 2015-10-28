@@ -17,7 +17,7 @@
 			<div class="tab-content">
 				<div class="tab-pane active" id="tab_find">
 					{if isset($car_blocks_data.search)}
-						<form action="{$smarty.const.IA_URL}search/cars/" method="get">
+						<form action="{$smarty.const.IA_URL}search/cars/">
 							<div class="container-fluid q-search__inputs">
 								<div class="row">
 									<div class="col-md-2">
@@ -31,24 +31,24 @@
 										</div>
 									</div>
 									<div class="col-md-2">
-										<select class="form-control js-car-make">
+										<select class="form-control js-car-make" name="mk">
 											<option value="0">{lang key='make'}</option>
 											{foreach $car_blocks_data.search.categories as $item}
-												<option value="{$item.id}"{if isset($smarty.get.fmid) && $smarty.get.fmid == $item.id} selected{/if}>{$item.name}</option>
+												<option value="{$item.id}"{if isset($smarty.get.mk) && $smarty.get.mk == $item.id} selected{/if}>{$item.name}</option>
 											{/foreach}
 										</select>
 									</div>
 									<div class="col-md-2">
 										<div class="q-search__loader"><div class="loader"></div></div>
-										<select name="" id="" class="form-control js-car-model">
+										<select name="md" id="" class="form-control js-car-model">
 											<option value="1">{lang key='model'}</option>
 										</select>
 									</div>
 									<div class="col-md-2">
-										<input class="form-control" type="text" name="price_from" placeholder="Price min" value="{if isset($smarty.get.price_from)}{$smarty.get.price_from}{else}{/if}">
+										<input class="form-control" type="text" name="price[f]" placeholder="Price min" value="{if isset($smarty.get.price[f])}{$smarty.get.price[f]}{else}{/if}">
 									</div>
 									<div class="col-md-2">
-										<input class="form-control" type="text" name="price_to" placeholder="Price max" value="{if isset($smarty.get.price_to)}{$smarty.get.price_to}{else}{/if}">
+										<input class="form-control" type="text" name="price[t]" placeholder="Price max" value="{if isset($smarty.get.price[t])}{$smarty.get.price[t]}{else}{/if}">
 									</div>
 									<div class="col-md-2">
 										<button class="btn btn-success btn-block" type="submit">
@@ -71,8 +71,8 @@
 							</div>
 							<p class="q-search__info">We have total of <b>{$num_autos}</b> listings. <a href="{$core.packages.autos.url}add/">Get listed</a> to sell your car</p>
 
-							<input type="hidden" name="fmid" value="{if isset($smarty.get.fmid)}{$smarty.get.fmid|intval}{else}0{/if}">
-							<input type="hidden" name="mid" value="{if isset($smarty.get.mid)}{$smarty.get.mid|intval}{else}0{/if}">
+							<input type="hidden" name="mk" value="{if isset($smarty.get.mk)}{$smarty.get.mk|intval}{else}0{/if}">
+							<input type="hidden" name="md" value="{if isset($smarty.get.md)}{$smarty.get.md|intval}{else}0{/if}">
 						</form>
 					{/if}
 				</div>
