@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template name="cars">
-	<title>Autos</title>
+	<title>Cars</title>
 	<summary>Template for Subrion Autos Script</summary>
 	<author>Gleb Surinov</author>
 	<contributor>Intelliants LLC</contributor>
@@ -48,7 +48,7 @@
 		    name="max_top_menu_items" 
 		    type="text" 
 		    description="Max number of items in Main Menu"
-		    order="3002">5</config>
+		    order="3002">7</config>
 
 	<config group="template_cars"
 		    name="fixed_navbar" 

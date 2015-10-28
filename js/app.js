@@ -97,7 +97,6 @@ $(function() {
 	var $customChecks = $('.c-checkbox');
 
 	$customChecks.each(function() {
-		console.log('done');
 		var $this = $(this).find('input'),
 			$parent = $this.parent(),
 			$icon = $parent.find('.fa');

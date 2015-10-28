@@ -23,10 +23,10 @@
 									<div class="col-md-2">
 										<div class="btn-group btn-group-justified" data-toggle="buttons">
 											<label class="btn btn-primary">
-												<input type="radio" name="auto_type" value="new" autocomplete="off"> <span class="fa fa-check"></span> New
+												<input type="radio" name="condition" value="new" autocomplete="off"> <span class="fa fa-check"></span> New
 											</label>
 											<label class="btn btn-primary active">
-												<input type="radio" name="auto_type" value="used" autocomplete="off" checked> <span class="fa fa-check"></span> Used
+												<input type="radio" name="condition" value="used" autocomplete="off" checked> <span class="fa fa-check"></span> Used
 											</label>
 										</div>
 									</div>

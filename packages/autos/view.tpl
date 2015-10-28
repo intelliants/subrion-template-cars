@@ -25,7 +25,7 @@
 				<h2><span>{$item.model}, {$item.release_year}</span></h2>
 				<div class="v-item__header__price">{$item.price}</div>
 				<div class="v-item-header__info">
-					<span class="v-item__header__info__item">{lang key='field_auto_type'}: <a href="{$core.packages.autos.url}condition/{$item.auto_type}/"><b>{lang key="field_auto_type_{$item.auto_type}"}</b></a></span>
+					<span class="v-item__header__info__item">{lang key='field_condition'}: <a href="{$core.packages.autos.url}condition/{$item.condition}/"><b>{lang key="field_condition_{$item.condition}"}</b></a></span>
 					<span class="v-item__header__info__item"><span class="fa fa-eye"></span> {$item.views_num}</span>
 					<span class="v-item__header__info__item">{lang key='added_on'} {$item.date_added|date_format:$core.config.date_format}</b></span>
 				</div>
@@ -144,7 +144,7 @@
 
 		{ia_hooker name='smartyItemViewBeforeTabs'}
 
-		{include file='item-view-tabs.tpl' isView=true exceptions=array('model', 'price', 'release_year', 'auto_type', 'mileage', 'engine', 'engine_type', 'engine_size', 'horse_power', 'transmission', 'auto_pictures', 'fuel_type', 'body_type', 'exterior_color', 'door_count', 'metallic', 'interior_color', 'interior_leather', 'drive_type', 'vin_code', 'additional_info', 'options_features') class='v-item-info__section'}
+		{include file='item-view-tabs.tpl' isView=true exceptions=array('model', 'price', 'release_year', 'condition', 'mileage', 'engine', 'engine_type', 'engine_size', 'horse_power', 'transmission', 'auto_pictures', 'fuel_type', 'body_type', 'exterior_color', 'door_count', 'metallic', 'interior_color', 'interior_leather', 'drive_type', 'vin_code', 'additional_info', 'options_features') class='v-item-info__section'}
 
 		{ia_hooker name='smartyViewListingBeforeFooter'}
 	</div>

@@ -31,8 +31,8 @@
 							<table class="ia-card__info-table">
 								<tbody>
 									<tr>
-										<td>{lang key='field_auto_type'}</td>
-										<td><div class="wrp"><a href="{$core.packages.autos.url}condition/{$item.auto_type}/">{lang key="field_auto_type_{$item.auto_type}"}</a></div></td>
+										<td>{lang key='field_condition'}</td>
+										<td><div class="wrp"><a href="{$core.packages.autos.url}condition/{$item.condition}/">{lang key="field_condition_{$item.condition}"}</a></div></td>
 									</tr>
 									<tr>
 										<td>{lang key='field_body_type'}:</td>
