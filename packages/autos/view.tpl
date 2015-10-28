@@ -16,7 +16,7 @@
 						{/foreach}
 					</div>
 				</div>
-			{/if}		
+			{/if}
 		</div>
 		<div class="col-md-6">
 			<div class="v-item__header">
