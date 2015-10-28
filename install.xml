@@ -74,9 +74,9 @@
 		<block position="verytop" status="active" pages="index" header="0">auto_sponsored</block>
 		<block position="left" status="active" pages="autos_view" header="0" order="2">autos_enquiry_form</block>
 		<block position="left" order="-1" status="active" pages="autos_view" header="0">autos_author</block>
-		<block position="left" header="0" status="active" pages="autos_index,autos_index_latest,autos_view,autos_index_featured,autos_index_popular,autos_index_random,search_autos,autos_models" order="1">autos_tools</block>
-		<block position="left" classname="box--featured" status="active" pages="autos_index,autos_index_latest,autos_view,autos_index_featured,autos_index_popular,autos_index_random,search_autos,autos_models" order="5">auto_featured</block>
-		<block position="left" status="active" pages="autos_index,autos_index_latest,autos_index_featured,autos_index_popular,autos_index_random,search_autos,autos_models" order="99">auto_random</block>
+		<block position="left" header="0" status="active" pages="autos_index,autos_index_latest,autos_view,autos_index_featured,autos_index_popular,autos_index_random,search_autos,autos_models,autos_services,autos_service_view" order="1">autos_tools</block>
+		<block position="left" classname="box--featured" status="active" pages="autos_index,autos_index_latest,autos_view,autos_index_featured,autos_index_popular,autos_index_random,search_autos,autos_models,autos_services,autos_service_view" order="5">auto_featured</block>
+		<block position="left" status="active" pages="autos_index,autos_index_latest,autos_index_featured,autos_index_popular,autos_index_random,search_autos,autos_models,autos_services,autos_service_view" order="99">auto_random</block>
 
 		<block position="landing" order="99" status="active" sticky="0" pages="index" header="0">latest_news</block>
 		<block status="active" pages="search,search_autos,autos_index" classname="box--border">filters</block>
@@ -144,9 +144,9 @@
 			   type="smarty">
 			<![CDATA[
 <ul class="nav nav-links">
-	<li><a href="{$searchPageUrl}condition:used/">Used cars for sale</a></li>
-	<li><a href="{$searchPageUrl}condition:used/">Second hand cars for sale</a></li>
-	<li><a href="{$searchPageUrl}condition:new/">New cars for sale</a></li>
+	<li><a href="{$core.packages.autos.url}search/cars/condition:used/">Used cars for sale</a></li>
+	<li><a href="{$core.packages.autos.url}search/cars/condition:used/">Second hand cars for sale</a></li>
+	<li><a href="{$core.packages.autos.url}search/cars/condition:new/">New cars for sale</a></li>
 	<li><a href="{$core.packages.autos.url}featured/">Special Offers</a></li>
 </ul>
 			]]>

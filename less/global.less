@@ -136,6 +136,48 @@ body {
 .content {
   padding: @vertical-rhythm 0;
   background: #fff;
+
+  &__header {
+    .clearfix();
+    // border-bottom: 1px solid #ddd;
+    margin-bottom: @vertical-rhythm/2;
+    padding-bottom: @vertical-rhythm/2;
+
+    h1 {
+      float: left;
+      .font-normalize(28px, 0);
+    }
+  }
+
+  &__actions {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    > li {
+      float: left;
+
+      > a {
+        display: inline-block;
+        line-height: 28px;
+        margin-left: @vertical-rhythm/2;
+        color: fade(@text-color, 50%);
+
+        &:hover {
+          color: fade(@text-color, 70%);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__body {
+
+    + .box {
+      margin-top: @vertical-rhythm*2;
+    }
+  }
 }
 
 
