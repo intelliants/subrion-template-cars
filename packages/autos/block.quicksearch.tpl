@@ -39,7 +39,7 @@
 										</select>
 									</div>
 									<div class="col-md-2">
-										<div class="q-search__loader" style="display: none"><div class="loader"></div></div>
+										<div class="q-search__loader"><div class="loader"></div></div>
 										<select name="md" class="form-control js-car-model" data-spinner=".q-search__loader">
 											<option value="1">{lang key='model'}</option>
 										</select>
