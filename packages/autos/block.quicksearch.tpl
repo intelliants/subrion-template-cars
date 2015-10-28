@@ -6,6 +6,7 @@
 					<li class="active"><a href="#tab_find" data-toggle="tab">{lang key='qsearch_find_a_perfect_car'}</a></li>
 					<li><a href="#tab_makes" data-toggle="tab">{lang key='qsearch_popular_makes'}</a></li>
 					<li><a href="#tab_bodystyle" data-toggle="tab">{lang key='qsearch_bodystyle'}</a></li>
+					<li><a href="#tab_year" data-toggle="tab">{lang key='qsearch_year'}</a></li>
 				</ul>
 				<ul class="nav nav-links">
 					<li><a href="{$core.packages.autos.url}popular/">{lang key='qsearch_popular'}</a></li>
@@ -78,6 +79,9 @@
 				</div>
 				<div class="tab-pane" id="tab_bodystyle">
 					{ia_blocks block='bodystyle'}
+				</div>
+				<div class="tab-pane" id="tab_year">
+					{ia_blocks block='by_year'}
 				</div>
 			</div>
 		</div>

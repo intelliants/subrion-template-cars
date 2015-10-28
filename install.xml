@@ -17,6 +17,7 @@
 		<position>teaser</position>
 		<position>popular_makes</position>
 		<position>bodystyle</position>
+		<position>by_year</position>
 		<position>verytop</position>
 		<position>top</position>
 		<position>landing</position>
@@ -70,6 +71,7 @@
 		<block position="verytop" status="active" pages="index" header="0">autos_search</block>
 		<block position="popular_makes" status="active" pages="index" header="0">auto_make_list</block>
 		<block position="bodystyle" status="active" pages="index" header="0">auto_body_list</block>
+		<block position="by_year" status="active" pages="index" header="0">auto_year_list</block>
 		<block position="verybottom" status="active" pages="index" header="0">auto_recent</block>
 		<block position="verytop" status="active" pages="index" header="0">auto_sponsored</block>
 		<block position="left" status="active" pages="autos_view" header="0" order="2">autos_enquiry_form</block>
@@ -82,7 +84,6 @@
 		<block status="active" pages="search,search_autos,autos_index" classname="box--border">filters</block>
 
 		<block status="inactive" position="left" classname="box--border">common_statistics</block>
-		<block status="inactive">auto_year_list</block>
 		<block status="inactive">newsline</block>
 		<block status="inactive">blogroll</block>
 		<block status="inactive">new_blog_posts</block>
@@ -232,6 +233,7 @@
 		<phrase category="frontend" key="qsearch_featured">Featured</phrase>
 		<phrase category="frontend" key="qsearch_popular_makes">Popular makes</phrase>
 		<phrase category="frontend" key="qsearch_bodystyle">Bodystyle</phrase>
+		<phrase category="frontend" key="qsearch_year">By year</phrase>
 		<phrase category="frontend" key="more_makes">Show more makes</phrase>
 		<phrase category="frontend" key="less_makes">Show less makes</phrase>
 		<phrase category="frontend" key="car_details">Car details</phrase>
