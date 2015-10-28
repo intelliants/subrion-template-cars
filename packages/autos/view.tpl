@@ -30,12 +30,12 @@
 					<span class="v-item__header__info__item">{lang key='added_on'} {$item.date_added|date_format:$core.config.date_format}</b></span>
 				</div>
 				<div class="ia-car-info ia-car-info--block">
-					<span class="ia-car-info__icon ia-car-info__icon--body">{lang key='field_body_type'}: <b>{lang key="field_body_type_{$item.body_type}"}</b></span>
+					<span class="ia-car-info__icon ia-car-info__icon--body">{lang key='field_body_type'}: <a href="{$smarty.const.IA_URL}search/cars/body:{$item.body_type}/"><b>{lang key="field_body_type_{$item.body_type}"}</b></a></span>
 					{if $item.engine}
 						<span class="ia-car-info__icon ia-car-info__icon--engine">{lang key='field_engine'}: <b>{lang key="field_engine_{$item.engine}"}{if $item.engine_type} {lang key="field_engine_type_{$item.engine_type}"}{/if}{if $item.engine_size} {$item.engine_size}{/if}</b></span>
 					{/if}
 					{if $item.transmission}
-						<span class="ia-car-info__icon ia-car-info__icon--transmission">{lang key='field_transmission'}: <b>{lang key="field_transmission_{$item.transmission}"}</b></span>
+						<span class="ia-car-info__icon ia-car-info__icon--transmission">{lang key='field_transmission'}: <a href="{$smarty.const.IA_URL}search/cars/transmission:{$item.transmission}/"><b>{lang key="field_transmission_{$item.transmission}"}</b></a></span>
 					{/if}
 					{if $item.mileage}
 						<span class="ia-car-info__icon ia-car-info__icon--mileage">{lang key='field_mileage'}: <b>{$item.mileage}</b></span>
@@ -74,7 +74,7 @@
 							{if $item.exterior_color}
 								<tr>
 									<td>{lang key='field_exterior_color'}</td>
-									<td>{lang key="field_exterior_color_{$item.exterior_color}"}</td>
+									<td><a href="{$smarty.const.IA_URL}search/cars/exterior_color:{$item.exterior_color}/">{lang key="field_exterior_color_{$item.exterior_color}"}</a></td>
 								</tr>
 							{/if}
 							{if $item.metallic}
@@ -111,7 +111,7 @@
 							{if $item.drive_type}
 								<tr>
 									<td>{lang key='field_drive_type'}</td>
-									<td>{lang key="field_drive_type_{$item.drive_type}"}</td>
+									<td><a href="{$smarty.const.IA_URL}search/cars/drive_type:{$item.drive_type}/">{lang key="field_drive_type_{$item.drive_type}"}</a></td>
 								</tr>
 							{/if}
 							{if $item.vin_code}
