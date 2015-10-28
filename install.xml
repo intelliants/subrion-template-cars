@@ -222,6 +222,7 @@
 		<phrase category="frontend" key="login">Log in</phrase>
 		<phrase category="frontend" key="register">Sign up</phrase>
 		<phrase category="frontend" key="login_sign_up">Login / Sign up</phrase>
+		<phrase category="frontend" key="register_tag">Register on our website and sell your car. Many features included in your private area.</phrase>
 		<phrase category="frontend" key="sell_car">Sell a car</phrase>
 		<phrase category="frontend" key="wishlist">Wishlist</phrase>
 		<phrase category="frontend" key="add_to_wishlist">Add to wishlist</phrase>

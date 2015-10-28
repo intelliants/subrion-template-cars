@@ -32,13 +32,13 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title">Private area</h4>
+						<h4 class="modal-title">{lang key='login_sign_up'}</h4>
 					</div>
 					<div class="modal-body">
 						<div class="container-fluid">
 							<div class="row">
 								<div class="col-md-6">
-									<h4>Login</h4>
+									<h4>{lang key='login'}</h4>
 							
 									<form action="{$smarty.const.IA_URL}login/" method="post">
 										{preventCsrf}
@@ -61,8 +61,9 @@
 									</form>
 								</div>
 								<div class="col-md-6">
-									<h4>Sign up</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolor enim totam, fugiat minima amet ad tempore? Laboriosam nisi voluptatum magni fugiat laudantium at, ea nulla. Sequi explicabo repellat, optio!</p>
+									<h4>{lang key='register'}</h4>
+									<p>{lang key='register_tag'}</p>
+									<p><a class="btn btn-success" href="{$smarty.const.IA_URL}registration/" rel="nofollow">{lang key='registration'}</a></p>
 								</div>
 							</div>
 						</div>
