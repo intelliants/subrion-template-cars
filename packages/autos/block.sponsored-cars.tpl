@@ -32,13 +32,13 @@
 								<tbody>
 									<tr>
 										<td>{lang key='field_condition'}</td>
-										<td><div class="wrp"><a href="{$core.packages.autos.url}condition/{$item.condition}/">{lang key="field_condition_{$item.condition}"}</a></div></td>
+										<td><div class="wrp"><a href="{$smarty.const.IA_URL}search/cars/condition:{$item.condition}/">{lang key="field_condition_{$item.condition}"}</a></div></td>
 									</tr>
 									<tr>
 										<td>{lang key='field_body_type'}:</td>
 										<td>
 											<div class="wrp">
-												<a href="{$core.packages.autos.url}body-style/{$item.body_type}/">{lang key="field_body_type_{$item.body_type}"}</a>
+												<a href="{$smarty.const.IA_URL}search/cars/body:{$item.body_type}/">{lang key="field_body_type_{$item.body_type}"}</a>
 											</div>
 										</td>
 									</tr>
