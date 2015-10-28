@@ -293,7 +293,7 @@
 }
 
 .label-approval {
-  .label-variant(@label-warning-bg);
+  .label-variant(spin(@label-warning-bg, 15%));
 }
 
 .label-sold {
@@ -308,8 +308,9 @@
   .label-variant(#999);
 }
 
+.label-inactive,
 .label-hidden {
-  .label-variant(#444);
+  .label-variant(@label-default-bg);
 }
 
 .ia-item--rented,
