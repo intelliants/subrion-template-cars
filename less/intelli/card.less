@@ -143,14 +143,14 @@
 		text-decoration: none;
 	}
 
-	&.-sponsored {
-		border-color: @brand-warning;
-		background: fade(@brand-warning, 10%);
-	}
-
 	&.-featured {
 		border-color: @brand-info;
 		background: fade(@brand-info, 10%);
+	}
+
+	&.-sponsored {
+		border-color: @brand-warning;
+		background: fade(@brand-warning, 10%);
 	}
 
 	&__additional {
@@ -240,6 +240,14 @@
 
 	&.-more {
 		display: none;
+	}
+
+	&__color {
+		display: inline-block;
+		margin-right: 10px;
+		width: 20px;
+		height: 20px;
+		border: 1px solid #f0f0f0;
 	}
 }
 

@@ -90,11 +90,28 @@
 	</changeset>
 
 	<blocks>
+		<block name="teaser" 
+			   title="Teaser" 
+			   position="teaser" 
+			   header="0"
+			   collapsible="0" 
+			   sticky="0"
+			   pages="index" 
+			   status="active" 
+			   type="html">
+			<![CDATA[
+<div class="teaser">
+	<div class="container">
+		<h1>Find thousands of cars for sale</h1>
+		<h2>and other related ads</h2>
+	</div>
+</div>
+			]]>
+		</block>
 		<block name="benefits" 
 			   title="Benefits" 
 			   position="landing" 
 			   header="0"
-			  
 			   collapsible="0" 
 			   sticky="0"
 			   pages="index" 

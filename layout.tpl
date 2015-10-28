@@ -69,7 +69,7 @@
 
 		{if 'index' == $core.page.name}
 			<header class="header"{if $core.config.website_bg} style="background-image: url('{$smarty.const.IA_URL}uploads/{$core.config.website_bg}');"{/if}>
-				{*ia_blocks block='teaser'*}
+				{ia_blocks block='teaser'}
 			</header>
 		{/if}
 
