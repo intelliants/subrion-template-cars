@@ -91,7 +91,7 @@
 			<div class="content">
 				<div class="container">
 					<div class="row">
-						<div class="{width section='content' position='left' tag='col-md-'}{if 'autos_view' == $core.page.name} col-md-push-9{/if}">
+						<div class="{width section='content' position='left' tag='col-md-'}{if 'autos_view' == $core.page.name} col-md-push-9{/if} aside">
 							{ia_blocks block='left'}
 						</div>
 						<div class="{width section='content' position='center' tag='col-md-'}{if 'autos_view' == $core.page.name} col-md-pull-3{/if}">
