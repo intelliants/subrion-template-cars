@@ -383,6 +383,27 @@
 		float: left;
 	}
 
+	&__filter {
+		float: left;
+		margin: 0;
+
+		&__item {
+			display: inline-block;
+
+			select {
+				.form-control();
+				display: inline-block;
+				width: 130px !important;
+				margin-left: 5px;
+				vertical-align: middle;
+			}
+		}
+
+		button {
+			margin-left: 5px;
+		}
+	}
+
 	&__layout {
 		float: right;
 

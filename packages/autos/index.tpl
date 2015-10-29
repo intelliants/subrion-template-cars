@@ -2,10 +2,6 @@
 	<div class="page-description">{$category.description}</div>
 {/if}
 
-{if 'autos_index_member' == $core.page.name}
-	{include file='extra:autos/listing-filters'}
-{/if}
-
 {if isset($models) && $models}
 	{ia_block title={lang key='autos_models'} style='fixed' id='auto_categories'}
 		<div class="ia-categories">
@@ -17,8 +13,11 @@
 {if isset($listings) && $listings}
 	<div class="ia-cards">
 		<div class="ia-cards__actions">
+			{if 'autos_index_member' == $core.page.name}
+				{include file='extra:autos/listing-filters'}
+			{/if}
 			{if !isset($no_sorting)}
-				<div class="ia-cards__sorting">
+				<div class="ia-cards__sorting{if 'autos_index_member' == $core.page.name} pull-right m-l{/if}">
 					{lang key='sort_by'}:
 					<div class="btn-group">
 						<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">
@@ -84,6 +83,14 @@
 		{/if}
 	</div>
 {elseif !isset($category.id)}
+	<div class="ia-cards">
+		<div class="ia-cards__actions">
+			{if 'autos_index_member' == $core.page.name}
+				{include file='extra:autos/listing-filters'}
+			{/if}
+		</div>
+	</div>
+	
 	<div class="alert alert-info">
 		{lang key='no_listings_to_show'}
 	</div>
