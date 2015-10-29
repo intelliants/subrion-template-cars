@@ -64,6 +64,12 @@
 		    description="Header background"
 		    order="3004"><![CDATA[]]></config>
 
+	<config group="template_cars" 
+		    name="ckeditor_css" 
+		    type="hidden" 
+		    description="CKEditor CSS"
+		    order="3099">ckeditor.css</config>
+
 	<changeset>
 		<menu position="account" status="active">account</menu>
 		<menu position="left" status="inactive">autos</menu>

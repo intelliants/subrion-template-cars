@@ -1,6 +1,6 @@
 {if isset($listings) && $listings}
 	<div class="ia-cards">
-		<div class="ia-cards__items{if $smarty.cookies.cardsLayout} -{$smarty.cookies.cardsLayout}{/if}">
+		<div class="ia-cards__items{if isset($smarty.cookies.cardsLayout)} -{$smarty.cookies.cardsLayout}{/if}">
 			<div class="row">
 				{foreach $listings as $listing}
 					<div class="col-md-3">

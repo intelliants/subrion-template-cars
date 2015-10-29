@@ -42,6 +42,11 @@
 					{/if}
 				</div>
 				<ul class="content__actions">
+					{if $member && $member.id == $item.member_id}
+						<li>
+							<span class="label label-{$item.status}" title="{lang key=$item.status default=$item.status}"><span class="fa fa-warning"></span> {lang key=$item.status default=$item.status}</span>
+						</li>
+					{/if}
 					{foreach $core.actions as $name => $action}
 						<li>
 							{if 'action-favorites' == $name}
