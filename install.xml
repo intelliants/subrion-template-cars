@@ -64,6 +64,13 @@
 		    description="Header background"
 		    order="3004"><![CDATA[]]></config>
 
+	<config group="template_cars"
+		    name="show_by_year" 
+		    type="radio"
+		    order="3005" 
+		    values="1,0" 
+		    description="Show search by year">1</config>
+
 	<config group="template_cars" 
 		    name="ckeditor_css" 
 		    type="hidden" 
