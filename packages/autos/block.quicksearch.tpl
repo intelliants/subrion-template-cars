@@ -33,7 +33,7 @@
 									</div>
 									<div class="col-md-2">
 										<select class="form-control js-car-make" name="mk">
-											<option value="0">{lang key='make'}</option>
+											<option value="">{lang key='make'}</option>
 											{foreach $car_blocks_data.search.categories as $item}
 												<option value="{$item.id}"{if isset($smarty.get.mk) && $smarty.get.mk == $item.id} selected{/if}>{$item.name|escape:'html'}</option>
 											{/foreach}
@@ -42,7 +42,7 @@
 									<div class="col-md-2">
 										<div class="q-search__loader"><div class="loader"></div></div>
 										<select name="md" class="form-control js-car-model" data-spinner=".q-search__loader">
-											<option value="1">{lang key='model'}</option>
+											<option value="">{lang key='model'}</option>
 										</select>
 									</div>
 									<div class="col-md-2">
