@@ -2,7 +2,7 @@
 	<div class="container">
 		<h2 class="title title--accent">Special offers</h2>
 
-		<div class="owl-carousel ia-carousel">
+		<div class="owl-carousel ia-carousel js-carousel-sponsored">
 			{foreach $car_blocks_data.sponsored as $item}
 				<div class="ia-carousel__item">
 					<div class="ia-card -{$item.status} {if 'hidden' == $item.status}-hidden{/if}">
@@ -59,7 +59,7 @@
 
 	{ia_add_js}
 $(function() {
-	$('.ia-carousel').owlCarousel({
+	$('.js-carousel-sponsored').owlCarousel({
 		items: 4,
 		margin: 10,
 		dots: false,
