@@ -258,5 +258,10 @@
 		<phrase category="frontend" key="less_makes">Show less makes</phrase>
 		<phrase category="frontend" key="car_details">Car details</phrase>
 		<phrase category="frontend" key="added_on">added on</phrase>
+		<phrase category="frontend" key="special_offers">Special offers</phrase>
+		<phrase category="frontend" key="total_cars_listed">Total cars listed</phrase>
+		<phrase category="frontend" key="get_listed">Get listed to sell your car</phrase>
+		<phrase category="frontend" key="list">List</phrase>
+		<phrase category="frontend" key="grid">Grid</phrase>
 	</phrases>
 </template>

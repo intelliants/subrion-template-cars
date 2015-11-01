@@ -53,8 +53,8 @@
 				</div>
 			{/if}
 			<div class="ia-cards__layout">
-				<a class="btn btn-default js-toggle-layout{if isset($smarty.cookies.cardsLayout) && 'list' == $smarty.cookies.cardsLayout} active{/if}" data-layout="list" href="#"><span class="fa fa-bars"></span> List</a>
-				<a class="btn btn-default js-toggle-layout{if isset($smarty.cookies.cardsLayout) && 'grid' == $smarty.cookies.cardsLayout} active{/if}" data-layout="grid" href="#"><span class="fa fa-th"></span> Grid</a>
+				<a class="btn btn-default js-toggle-layout{if isset($smarty.cookies.cardsLayout) && 'list' == $smarty.cookies.cardsLayout} active{/if}" data-layout="list" href="#"><span class="fa fa-bars"></span> {lang key='list'}</a>
+				<a class="btn btn-default js-toggle-layout{if isset($smarty.cookies.cardsLayout) && 'grid' == $smarty.cookies.cardsLayout} active{/if}" data-layout="grid" href="#"><span class="fa fa-th"></span> {lang key='grid'}</a>
 			</div>
 		</div>
 		<div class="ia-cards__items{if isset($smarty.cookies.cardsLayout)} -{$smarty.cookies.cardsLayout}{/if}">

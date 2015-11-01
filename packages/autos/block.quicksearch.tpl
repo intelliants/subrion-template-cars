@@ -26,10 +26,10 @@
 									<div class="col-md-2">
 										<div class="btn-group btn-group-justified" data-toggle="buttons">
 											<label class="btn btn-primary">
-												<input type="radio" name="condition" value="new" autocomplete="off"> <span class="fa fa-check"></span> New
+												<input type="radio" name="condition" value="new" autocomplete="off"> <span class="fa fa-check"></span> {lang key='field_condition_new'}
 											</label>
 											<label class="btn btn-primary active">
-												<input type="radio" name="condition" value="used" autocomplete="off" checked> <span class="fa fa-check"></span> Used
+												<input type="radio" name="condition" value="used" autocomplete="off" checked> <span class="fa fa-check"></span> {lang key='field_condition_used'}
 											</label>
 										</div>
 									</div>
@@ -72,7 +72,7 @@
 									{lang key='include_sold_listings'}
 								</label>
 							</div>
-							<p class="q-search__info">We have total of <b>{$num_autos}</b> listings. <a href="{$core.packages.autos.url}add/">Get listed</a> to sell your car</p>
+							<p class="q-search__info">{lang key='total_cars_listed'}: <b class="text-success">{$num_autos}</b>. <a href="{$core.packages.autos.url}add/">{lang key='get_listed'}</a></p>
 						</form>
 					{/if}
 				</div>

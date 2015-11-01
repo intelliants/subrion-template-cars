@@ -1,5 +1,5 @@
 {if isset($car_blocks_data.recent)}
-	<h2 class="title title--accent">Recently added cars</h2>
+	<h2 class="title title--accent">{$block.title|escape:'html'}</h2>
 	<div class="ia-cards ia-cards--small">
 		<div class="ia-cards__items">
 			<div class="row">

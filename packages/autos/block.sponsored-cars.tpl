@@ -1,6 +1,6 @@
 {if isset($car_blocks_data.sponsored)}
 	<div class="container">
-		<h2 class="title title--accent">Special offers</h2>
+		<h2 class="title title--accent">{lang key='special_offers'}</h2>
 
 		<div class="owl-carousel ia-carousel js-carousel-sponsored">
 			{foreach $car_blocks_data.sponsored as $item}
