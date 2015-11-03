@@ -65,15 +65,22 @@
 		    description="Fixed navbar">1</config>
 
 	<config group="template_cars" 
+		    name="website_color" 
+		    type="select" 
+		    multiplevalues="default,sky,roseus,carrot,bedroom" 
+		    description="Template color"
+		    order="3004">default</config>
+
+	<config group="template_cars" 
 		    name="website_bg" 
 		    type="image" 
 		    description="Header background"
-		    order="3004"><![CDATA[]]></config>
+		    order="3005"><![CDATA[]]></config>
 
 	<config group="template_cars"
 		    name="show_by_year" 
 		    type="radio"
-		    order="3005" 
+		    order="3006" 
 		    values="1,0" 
 		    description="Show search by year">1</config>
 
