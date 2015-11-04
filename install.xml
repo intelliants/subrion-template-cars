@@ -85,6 +85,42 @@
 		    description="Show search by year">1</config>
 
 	<config group="template_cars" 
+		    name="cars_divider2" 
+		    type="divider" 
+		    order="3030">Social links</config>
+	
+	<config group="template_cars"
+			name="template_social"
+		    type="radio" 
+		    order="3031"
+		    values="1,0" 
+		    description="Show links">1</config>
+	<config group="template_cars"
+			name="template_social_t"
+		    type="text"
+		    order="3032"
+		    show="template_social|1" 
+		    description="Twitter Link">https://twitter.com/IntelliantsLLC</config>
+	<config group="template_cars"
+			name="template_social_f"
+		    type="text" 
+		    order="3033" 
+		    show="template_social|1" 
+		    description="Facebook Link">https://www.facebook.com/Intelliants</config>
+	<config group="template_cars"
+			name="template_social_g"
+		    type="text" 
+		    order="3034" 
+		    show="template_social|1" 
+		    description="Google+ Link">https://plus.google.com/102500660503219569194/posts</config>
+	<config group="template_cars"
+			name="template_social_y"
+		    type="text" 
+		    order="3035" 
+		    show="template_social|1" 
+		    description="You Tube Link">#</config>
+
+	<config group="template_cars" 
 		    name="ckeditor_css" 
 		    type="hidden" 
 		    description="CKEditor CSS"
