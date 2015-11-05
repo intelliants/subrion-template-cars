@@ -15,12 +15,12 @@
 			{printImage imgfile=$listing.auto_pictures[0]['path'] title=$listing.model}
 			<span class="ia-card__support-info">
 				<span class="pull-left"><span class="fa fa-image"></span> {$listing.auto_pictures_num}</span>
-				<span class="pull-right">{$listing.date_added|date_format:$core.config.date_format}</span>
+				<span class="hidden-xs pull-right">{$listing.date_added|date_format:$core.config.date_format}</span>
 			</span>
 		</a>
 
 		{if $listing.sponsored}
-			<div class="ia-card__image__more">
+			<div class="ia-card__image__more hidden-xs">
 				{foreach $listing.auto_pictures as $pic}
 					{if !$pic@first}
 						<a href="{$listing.link}">

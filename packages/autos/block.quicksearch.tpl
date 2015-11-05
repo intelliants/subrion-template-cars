@@ -3,11 +3,11 @@
 		<div class="q-search">
 			<div class="q-search__tabs">
 				<ul class="nav nav-tabs">
-					<li class="active"><a href="#tab_find" data-toggle="tab">{lang key='qsearch_find_a_perfect_car'}</a></li>
+					<li class="active"><a href="#tab_find" data-toggle="tab"><span class="hidden-sm hidden-xs">{lang key='qsearch_find_a_perfect_car'}</span><span class="fa fa-search visible-sm visible-xs"></span></a></li>
 					<li><a href="#tab_makes" data-toggle="tab">{lang key='qsearch_popular_makes'}</a></li>
 					<li><a href="#tab_bodystyle" data-toggle="tab">{lang key='qsearch_bodystyle'}</a></li>
 					{if $core.config.show_by_year}
-						<li><a href="#tab_year" data-toggle="tab">{lang key='qsearch_year'}</a></li>
+						<li class="hidden-sm hidden-xs"><a href="#tab_year" data-toggle="tab">{lang key='qsearch_year'}</a></li>
 					{/if}
 				</ul>
 				<ul class="nav nav-links">

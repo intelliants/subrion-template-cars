@@ -4,7 +4,7 @@
 		<div class="ia-cards__items">
 			<div class="row">
 				{foreach $car_blocks_data.recent as $item}
-					<div class="col-md-2">
+					<div class="col-md-2 col-sm-2">
 						<div class="ia-card ia-card--small -{$item.status} {if 'hidden' == $item.status}-hidden{/if} {if $item.featured}-featured{/if} {if $item.sponsored}-sponsored{/if}">
 			
 							{if $item.auto_pictures}

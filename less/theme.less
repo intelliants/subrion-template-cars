@@ -284,12 +284,24 @@
           color: #fff;
         }
       }
+
+      @media (max-width: @screen-xs) {
+        right: auto;
+        left: 50%;
+        top: auto;
+        bottom: -46px;
+        margin-left: -38px;
+
+        [class*='owl-']:first-child {
+          margin-left: 0;
+        }
+      }
     }
 
-    .owl-dots {
-      position: absolute;
-      top: -56px;
-      right: 100px;
-    }
+    // .owl-dots {
+    //   position: absolute;
+    //   top: -56px;
+    //   right: 100px;
+    // }
   }
 }

@@ -164,14 +164,14 @@
 					</div>
 					<div class="col-md-6">
 						{if $core.config.template_social}
-							<div class="social pull-left">
+							<div class="social">
 								{if $core.config.template_social_t}<a class="twitter" href="{$core.config.template_social_t}" target="_blank"><span class="fa fa-twitter"></span></a>{/if}
 								{if $core.config.template_social_f}<a class="facebook" href="{$core.config.template_social_f}" target="_blank"><span class="fa fa-facebook"></span></a>{/if}
 								{if $core.config.template_social_g}<a class="google-plus" href="{$core.config.template_social_g}" target="_blank"><span class="fa fa-google-plus"></span></a>{/if}
 								{if $core.config.template_social_y}<a class="youtube" href="{$core.config.template_social_y}" target="_blank"><span class="fa fa-youtube"></span></a>{/if}
 							</div>
 						{/if}
-						<div class="copyright pull-right">
+						<div class="copyright">
 							<p>
 								&copy; {$smarty.server.REQUEST_TIME|date_format:'%Y'} {lang key='powered_by_subrion'}
 							</p>

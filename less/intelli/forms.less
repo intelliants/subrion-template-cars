@@ -233,6 +233,18 @@
     [class^="col-md"] {
       padding-left: 5px;
       padding-right: 5px;
-    } 
+
+      @media (max-width: @screen-sm-min) {
+        margin-top: 5px !important;
+      }
+    }
+  }
+
+  @media (max-width: @screen-md-min) {
+
+    .select2-container {
+      display: block;
+      width: 100% !important; 
+    }
   }
 }

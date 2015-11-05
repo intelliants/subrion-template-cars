@@ -64,7 +64,21 @@ $(function() {
 		margin: 10,
 		dots: false,
 		nav: true,
-		navText: ['<span class="fa fa-angle-left"></span>','<span class="fa fa-angle-right"></span>']
+		navText: ['<span class="fa fa-angle-left"></span>','<span class="fa fa-angle-right"></span>'],
+		responsive: {
+			0: {
+				items: 1
+			},
+			320: {
+				items: 2
+			},
+			500: {
+				items: 3
+			},
+			768: {
+				items: 4
+			}
+		}
 	});
 });
 	{/ia_add_js}

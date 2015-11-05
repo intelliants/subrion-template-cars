@@ -104,4 +104,34 @@ $(function() {
 
 		intelli.cookie.write('cardsLayout', layout, 30, intelli.config.baseurl.replace(window.location.origin, ''));
 	});
+
+
+
+	//
+	// View page: move author and tools after car info
+	// --------------------------------------------------
+
+	var mq = function(query, callback, usePolyfill) {
+	    var host = {};
+	    var isMatchMediaSupported = !!(window && window.matchMedia) && !usePolyfill;
+	    if(isMatchMediaSupported) {
+	        var res = window.matchMedia(query);
+	        callback.apply(host, [res.matches, res.media]);
+	        res.addListener(function(changed) {
+	            callback.apply(host, [changed.matches, changed.media]);
+	        });
+	    } else {
+	        console.log('IE its you! Go home IE! You are drunk!');
+	    }
+	}
+
+	if ($('.page-autos_view').length) {
+		mq('(max-width: 768px)', function(match) {
+		    if (match) {
+		    	var $b = $('.content .aside');
+
+		    	$b.insertAfter($b.next());
+		    }
+		});
+	}
 });

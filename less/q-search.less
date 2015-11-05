@@ -43,6 +43,10 @@
 				}
 			}
 		}
+
+		@media (max-width: @screen-md-min) {
+			display: none;
+		}
 	}
 
 	.nav-tabs {
@@ -67,6 +71,18 @@
 				&:hover {
 					background: lighten(@link-color, 10%);
 				}
+
+				@media (max-width: @grid-float-breakpoint) {
+					font-size: 16px;
+					line-height: 16px;
+					padding: 20px 24px;
+				}
+
+				@media (max-width: 650px) {
+					font-size: 14px;
+					line-height: 14px;
+					padding: 18px 14px;
+				}
 			}
 
 			&.active > a,
@@ -78,6 +94,8 @@
 				border: none;
 			}
 		}
+
+
 	}
 
 	.tab-content {
@@ -107,6 +125,15 @@
 			&:last-child {
 				padding-right: 0;
 			}
+
+			@media (max-width: @screen-md-min) {
+				padding: 0;
+				margin-bottom: 10px;
+			}
+
+			@media (max-width: @grid-float-breakpoint) {
+				margin: 0 0 10px !important;
+			}
 		}
 
 		.btn-group {
@@ -130,12 +157,28 @@
 
 	&__more-actions {
 		float: left;
+
+		@media (max-width: @grid-float-breakpoint) {
+			float: none;
+			margin-bottom: 10px;
+		}
+
+		@media (max-width: @screen-xs-max) {
+			.c-checkbox {
+				display: block;
+				margin-left: 0;
+			}
+		}
 	}
 
 	&__info {
 		float: right;
 		margin: 0;
 		color: fade(@text-color, 70%);
+
+		@media (max-width: @grid-float-breakpoint) {
+			float: none;
+		}
 	}
 }
 
