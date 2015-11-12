@@ -160,7 +160,7 @@
 				<div class="row">
 					<div class="col-md-6">
 						{ia_blocks block='copyright'}
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint accusantium doloremque, numquam, aut, modi similique corporis totam nulla pariatur nesciunt harum mollitia. Qui inventore dolores laboriosam, delectus temporibus deserunt neque?</p>
+						<p>{lang key='copyright_text'}</p>
 					</div>
 					<div class="col-md-6">
 						{if $core.config.template_social}

@@ -306,5 +306,6 @@
 		<phrase category="frontend" key="get_listed">Get listed to sell your car</phrase>
 		<phrase category="frontend" key="list">List</phrase>
 		<phrase category="frontend" key="grid">Grid</phrase>
+		<phrase category="frontend" key="copyright_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit adipisci pariatur, nihil laboriosam fugit, laborum. Quisquam, iure blanditiis voluptatibus, quibusdam deserunt nobis vero quaerat cupiditate, animi consequatur sed vel facilis.</phrase>
 	</phrases>
 </template>
