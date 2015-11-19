@@ -61,7 +61,7 @@
 		</div>
 
 		{if $listing.additional_info}
-			<p class="ia-car-summary">{$listing.additional_info|escape|truncate:350:'...':true}</p>
+			<p class="ia-car-summary">{$listing.additional_info|strip_tags|truncate:350:'...':true}</p>
 		{/if}
 
 		<table class="ia-card__info-table">
