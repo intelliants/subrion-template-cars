@@ -9,7 +9,7 @@
 					</a>
 				</div>
 
-				{if $entry@iteration % 4 == 0}
+				{if $entry@iteration % 4 == 0 && !$entry@last}
 					</div>
 					<div class="row">
 				{/if}

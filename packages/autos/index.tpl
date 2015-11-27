@@ -63,8 +63,8 @@
 					<div class="col-md-3">
 						{include file='extra:autos/list-autos'}
 					</div>
-			
-					{if $listing@iteration % 4 == 0}
+
+					{if $listing@iteration % 4 == 0 && !$listing@last}
 						</div>
 						<div class="row">
 					{/if}
