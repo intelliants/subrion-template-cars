@@ -112,26 +112,27 @@ $(function() {
 	// --------------------------------------------------
 
 	var mq = function(query, callback, usePolyfill) {
-	    var host = {};
-	    var isMatchMediaSupported = !!(window && window.matchMedia) && !usePolyfill;
-	    if(isMatchMediaSupported) {
-	        var res = window.matchMedia(query);
-	        callback.apply(host, [res.matches, res.media]);
-	        res.addListener(function(changed) {
-	            callback.apply(host, [changed.matches, changed.media]);
-	        });
-	    } else {
-	        console.log('IE its you! Go home IE! You are drunk!');
-	    }
+		var host = {};
+		var isMatchMediaSupported = !!(window && window.matchMedia) && !usePolyfill;
+		if(isMatchMediaSupported) {
+			var res = window.matchMedia(query);
+			callback.apply(host, [res.matches, res.media]);
+			res.addListener(function(changed) {
+				callback.apply(host, [changed.matches, changed.media]);
+			});
+		} else {
+			console.log('IE its you! Go home IE! You are drunk!');
+		}
 	}
 
 	if ($('.page-autos_view').length) {
 		mq('(max-width: 768px)', function(match) {
-		    if (match) {
-		    	var $b = $('.content .aside');
-
-		    	$b.insertAfter($b.next());
-		    }
+			var $b = $('.content .aside');
+			if (match) {
+				$b.insertAfter($b.next());
+			} else {
+				$b.insertBefore($b.prev());
+			}
 		});
 	}
 });
