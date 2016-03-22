@@ -1,6 +1,7 @@
 <div class="sec sec-search">
 	<div class="container">
-		<div class="q-search">
+		<div class="q-search{if 'index' != $core.page.name} q-search--inner{/if}">
+			{if 'index' == $core.page.name}
 			<div class="q-search__tabs">
 				<ul class="nav nav-tabs">
 					<li class="active"><a href="#tab_find" data-toggle="tab"><span class="hidden-sm hidden-xs">{lang key='qsearch_find_a_perfect_car'}</span><span class="fa fa-search visible-sm visible-xs"></span></a></li>
@@ -16,7 +17,8 @@
 					<li><a href="{$core.packages.autos.url}featured/">{lang key='qsearch_featured'}</a></li>
 				</ul>
 			</div>
-			
+			{/if}
+
 			<div class="tab-content">
 				<div class="tab-pane active" id="tab_find">
 					{if isset($car_blocks_data.search)}
@@ -67,7 +69,7 @@
 									{lang key='with_pictures_only'}
 								</label>
 								<label class="checkbox-inline c-checkbox">
-									<input type="checkbox" name="sold" value="1"> 
+									<input type="checkbox" name="sold" value="1">
 									<span class="fa fa-square"></span>
 									{lang key='include_sold_listings'}
 								</label>
