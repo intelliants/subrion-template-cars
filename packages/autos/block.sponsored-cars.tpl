@@ -27,7 +27,7 @@
 								</ul>
 							</div>
 							<a class="ia-card__title" href="{$item.link}">{$item.model}, {$item.release_year}</a>
-							<p class="ia-card__sub-title">{$item.price}</p>
+							<p class="ia-card__sub-title">{$item.price_formatted}</p>
 							<table class="ia-card__info-table">
 								<tbody>
 									<tr>

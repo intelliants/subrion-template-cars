@@ -10,7 +10,7 @@
 					<h4 class="ia-item__title">
 						<a href="{$item.link}">{$item.model}, {$item.release_year}</a>
 					</h4>
-					<p class="ia-item__price"><span>{$item.price}</span></p>
+					<p class="ia-item__price"><span>{$item.price_formatted}</span></p>
 					<p>
 						<a href="{$smarty.const.IA_URL}search/cars/body:{$item.body_type}/">{lang key="field_body_type_{$item.body_type}"}</a>,
 						{lang key="field_exterior_color_{$item.exterior_color}"}, 
