@@ -28,7 +28,7 @@
 					<td><b class="text-success">{$core.config.currency}{$item.price}</b></td>
 				</tr>
 				<tr>
-					<td>{lang key='field_categories'}</td>
+					<td>{lang key='field_autos_parts_categories'}</td>
 					<td>
 						{$cats = explode(',', $item.categories)}
 
@@ -48,23 +48,23 @@
 				</tr>
 				{if $item.company_address}
 					<tr>
-						<td>{lang key='field_company_address'}</td>
+						<td>{lang key='field_autos_services_company_address'}</td>
 						<td>{$item.company_address}</td>
 					</tr>
 				{/if}
 				<tr>
-					<td>{lang key='field_company_phone'}</td>
+					<td>{lang key='field_autos_services_company_phone'}</td>
 					<td>{$item.company_phone}</td>
 				</tr>
 				{if $item.company_website}
 					<tr>
-						<td>{lang key='field_company_website'}</td>
+						<td>{lang key='field_autos_services_company_website'}</td>
 						<td>{$item.company_website|linkify}</td>
 					</tr>
 				{/if}
 				{if $item.company_skype}
 					<tr>
-						<td>{lang key='field_company_skype'}</td>
+						<td>{lang key='field_autos_services_company_skype'}</td>
 						<td><a href="call:{$item.company_skype}">{$item.company_skype}</a></td>
 					</tr>
 				{/if}
@@ -92,7 +92,7 @@
 					 data-allowfullscreen="true"
 					 data-fit="{$core.config.template_fotorama_part}">
 					{foreach $pics as $entry}
-						<a class="v-item__gallery__item" href="{printImage imgfile=$entry.path url=true fullimage=true}">{printImage imgfile=$entry.path title=$entry.title}</a>
+						<a class="v-item__gallery__item" href="{ia_image file=$entry url=true type='large'}">{ia_image type='large' file=$entry}</a>
 					{/foreach}
 				</div>
 			</div>

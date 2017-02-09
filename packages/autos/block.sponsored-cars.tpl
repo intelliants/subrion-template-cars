@@ -9,7 +9,7 @@
 
 						{if $item.auto_pictures}
 							<a class="ia-card__image" href="{$item.link}">
-								{printImage imgfile=$item.auto_pictures[0]['path'] title=$item.model}
+								{ia_image type='thumbnail' file=$item.auto_pictures[0] title=$item.model}
 								<span class="ia-card__support-info">
 									<span class="pull-left"><span class="fa fa-image"></span> {$item.auto_pictures_num}</span>
 									<span class="pull-right">{$item.date_added|date_format:$core.config.date_format}</span>
@@ -31,21 +31,21 @@
 							<table class="ia-card__info-table">
 								<tbody>
 									<tr>
-										<td>{lang key='field_condition'}</td>
-										<td><div class="wrp"><a href="{$smarty.const.IA_URL}search/cars/condition:{$item.condition}/">{lang key="field_condition_{$item.condition}"}</a></div></td>
+										<td>{lang key='field_autos_condition'}</td>
+										<td><div class="wrp"><a href="{$smarty.const.IA_URL}search/cars/condition:{$item.condition}/">{lang key="field_autos_condition+{$item.condition}"}</a></div></td>
 									</tr>
 									<tr>
-										<td>{lang key='field_body_type'}:</td>
+										<td>{lang key='field_autos_body_type'}:</td>
 										<td>
 											<div class="wrp">
-												<a href="{$smarty.const.IA_URL}search/cars/body:{$item.body_type}/">{lang key="field_body_type_{$item.body_type}"}</a>
+												<a href="{$smarty.const.IA_URL}search/cars/body:{$item.body_type}/">{lang key="field_autos_body_type+{$item.body_type}"}</a>
 											</div>
 										</td>
 									</tr>
 									<tr>
-										<td>{lang key='field_exterior_color'}:</td>
+										<td>{lang key='field_autos_exterior_color'}:</td>
 										<td>
-											<b>{lang key="field_exterior_color_{$item.exterior_color}"}</b>
+											<b>{lang key="field_autos_exterior_color+{$item.exterior_color}"}</b>
 										</td>
 									</tr>
 								</tbody>

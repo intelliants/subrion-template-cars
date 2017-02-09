@@ -9,7 +9,7 @@
 			<!-- <li><a class="navbar-btn-compare" href="#"><span class="fa fa-sort-amount-desc"></span> {lang key='compare'}</a></li> -->
 			<li class="dropdown">
 				<a href="#" class="navbar-btn-login dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-					{printImage imgfile=$member.avatar title=$member.fullname|default:$member.username class='img-circle' gravatar=true email=$member.email width=30}
+					{ia_image type='thumbnail' file=$member.avatar title=$member.fullname|default:$member.username class='img-circle' gravatar=true email=$member.email width=30}
 
 					{$member.fullname|default:$member.username}
 				</a>

@@ -2,7 +2,7 @@
 	{if $listing.pictures}
 		{$pics=unserialize($listing.pictures)}
 		<a class="ia-item__image" href="{ia_url item='autos_parts' data=$listing type='url'}">
-			{printImage imgfile=$pics[0]['path'] title="{$listing.title}" class='img-responsive'}
+			{ia_image type='thumbnail' file=$pics[0] title="{$listing.title}" class='img-responsive'}
 		</a>
 	{/if}
 

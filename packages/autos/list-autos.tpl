@@ -12,7 +12,7 @@
 
 	{if $listing.auto_pictures}
 		<a class="ia-card__image" href="{$listing.link}">
-			{printImage imgfile=$listing.auto_pictures[0]['path'] title=$listing.model}
+			{ia_image type='thumbnail' file=$listing.auto_pictures[0] title=$listing.model}
 			<span class="ia-card__support-info">
 				<span class="pull-left"><span class="fa fa-image"></span> {$listing.auto_pictures_num}</span>
 				<span class="hidden-xs pull-right">{$listing.date_added|date_format:$core.config.date_format}</span>
@@ -24,7 +24,7 @@
 				{foreach $listing.auto_pictures as $pic}
 					{if !$pic@first}
 						<a href="{$listing.link}">
-							{printImage imgfile=$pic['path'] title=$listing.model}
+							{ia_image type='thumbnail' file=$pic title=$listing.model}
 						</a>
 					{/if}
 					{if $pic@iteration == 4}
@@ -44,16 +44,16 @@
 				<li>{accountActions item=$listing itemtype='autos'}</li>
 			</ul>
 		</div>
-		
+
 		<a class="ia-card__title" href="{$listing.link}">{$listing.model}, {$listing.release_year}</a>
 		<p class="ia-card__sub-title">{$listing.price_formatted}</p>
 		<div class="ia-car-info">
-			<a class="ia-car-info__icon ia-car-info__icon--body" href="{$listing.link}">{lang key="field_body_type_{$listing.body_type}"}</a>
+			<a class="ia-car-info__icon ia-car-info__icon--body" href="{$listing.link}">{lang key="field_autos_body_type+{$listing.body_type}"}</a>
 			{if $listing.engine}
-				<a class="ia-car-info__icon ia-car-info__icon--engine" href="{$listing.link}">{lang key="field_engine_{$listing.engine}"}{if $listing.engine_type} {lang key="field_engine_type_{$listing.engine_type}"}{/if}{if $listing.engine_size} {$listing.engine_size}{/if}</a>
+				<a class="ia-car-info__icon ia-car-info__icon--engine" href="{$listing.link}">{lang key="field_autos_engine+{$listing.engine}"}{if $listing.engine_type} {lang key="field_autos_engine_type+{$listing.engine_type}"}{/if}{if $listing.engine_size} {$listing.engine_size}{/if}</a>
 			{/if}
 			{if $listing.transmission}
-				<a class="ia-car-info__icon ia-car-info__icon--transmission" href="{$listing.link}">{lang key="field_transmission_{$listing.transmission}"}</a>
+				<a class="ia-car-info__icon ia-car-info__icon--transmission" href="{$listing.link}">{lang key="field_autos_transmission+{$listing.transmission}"}</a>
 			{/if}
 			{if $listing.mileage}
 				<a class="ia-car-info__icon ia-car-info__icon--mileage" href="{$listing.link}">{$listing.mileage}</a>
@@ -67,20 +67,20 @@
 		<table class="ia-card__info-table">
 			<tbody>
 				<tr>
-					<td>{lang key='field_condition'}</td>
-					<td><div class="text-overflow"><a href="{$smarty.const.IA_URL}search/cars/condition:{$listing.condition}/">{lang key="field_condition_{$listing.condition}"}</a></div></td>
+					<td>{lang key='field_autos_condition'}</td>
+					<td><div class="text-overflow"><a href="{$smarty.const.IA_URL}search/cars/condition:{$listing.condition}/">{lang key="field_autos_condition+{$listing.condition}"}</a></div></td>
 				</tr>
 				<tr>
-					<td>{lang key='field_body_type'}:</td>
+					<td>{lang key='field_autos_body_type'}:</td>
 					<td>
 						<div class="text-overflow">
-							<a href="{$smarty.const.IA_URL}search/cars/body:{$listing.body_type}/">{lang key="field_body_type_{$listing.body_type}"}</a>
+							<a href="{$smarty.const.IA_URL}search/cars/body:{$listing.body_type}/">{lang key="field_autos_body_type+{$listing.body_type}"}</a>
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td>{lang key='field_exterior_color'}:</td>
-					<td><b>{lang key="field_exterior_color_{$listing.exterior_color}"}</b></td>
+					<td>{lang key='field_autos_exterior_color'}:</td>
+					<td><b>{lang key="field_autos_exterior_color+{$listing.exterior_color}"}</b></td>
 				</tr>
 			</tbody>
 		</table>

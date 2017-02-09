@@ -16,7 +16,7 @@
 		<h2>
 			{if $item.logo}
 				{$logo = unserialize($item.logo)}
-				{printImage imgfile=$logo.path title="{$item.title}" class='img-circle' width=30}
+				{ia_image type='thumbnail' file=$logo class='img-circle' width=30}
 			{/if}
 			<span>{$item.title}</span>
 		</h2>
@@ -28,7 +28,7 @@
 		<table class="v-item-table">
 			<tbody>
 				<tr>
-					<td>{lang key='field_categories'}</td>
+					<td>{lang key='field_autos_services_categories'}</td>
 					<td>
 						{$services = explode(',', $item.categories)}
 
@@ -38,22 +38,22 @@
 					</td>
 				</tr>
 				<tr>
-					<td>{lang key='field_company_address'}</td>
+					<td>{lang key='field_autos_services_company_address'}</td>
 					<td>{$item.company_address}</td>
 				</tr>
 				<tr>
-					<td>{lang key='field_company_phone'}</td>
+					<td>{lang key='field_autos_services_company_phone'}</td>
 					<td>{$item.company_phone}</td>
 				</tr>
 				{if $item.company_website}
 					<tr>
-						<td>{lang key='field_company_website'}</td>
+						<td>{lang key='field_autos_services_company_website'}</td>
 						<td>{$item.company_website|linkify}</td>
 					</tr>
 				{/if}
 				{if $item.company_skype}
 					<tr>
-						<td>{lang key='field_company_skype'}</td>
+						<td>{lang key='field_autos_services_company_skype'}</td>
 						<td><a href="call:{$item.company_skype}">{$item.company_skype}</a></td>
 					</tr>
 				{/if}
@@ -106,7 +106,7 @@ function geocodeAddress(geocoder, resultsMap) {
 					 data-allowfullscreen="true"
 					 data-fit="{$core.config.template_fotorama_service}">
 					{foreach $pics as $entry}
-						<a class="ia-item-view__gallery__item" href="{printImage imgfile=$entry.path url=true fullimage=true}">{printImage imgfile=$entry.path title=$entry.title}</a>
+						<a class="ia-item-view__gallery__item" href="{ia_image type='thumbnail' file=$entry.path url=true type='large'}">{ia_image type='thumbnail' file=$entry.path title=$entry.title}</a>
 					{/foreach}
 				</div>
 			</div>

@@ -28,10 +28,10 @@
 									<div class="col-md-2">
 										<div class="btn-group btn-group-justified" data-toggle="buttons">
 											<label class="btn btn-primary">
-												<input type="radio" name="condition" value="new" autocomplete="off"> <span class="fa fa-check"></span> {lang key='field_condition_new'}
+												<input type="radio" name="condition" value="new" autocomplete="off"> <span class="fa fa-check"></span> {lang key='field_autos_condition+new'}
 											</label>
 											<label class="btn btn-primary active">
-												<input type="radio" name="condition" value="used" autocomplete="off" checked> <span class="fa fa-check"></span> {lang key='field_condition_used'}
+												<input type="radio" name="condition" value="used" autocomplete="off" checked> <span class="fa fa-check"></span> {lang key='field_autos_condition+used'}
 											</label>
 										</div>
 									</div>
