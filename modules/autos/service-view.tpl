@@ -15,7 +15,7 @@
 		</ul>
 		<h2>
 			{if $item.logo}
-				{$logo = unserialize($item.logo)}
+				{$logo = unserialize($item.logo[0])}
 				{ia_image type='thumbnail' file=$logo class='img-circle' width=30}
 			{/if}
 			<span>{$item.title}</span>
@@ -59,44 +59,11 @@
 				{/if}
 			</tbody>
 		</table>
-
-		<div class="v-item-info">
-			<div id="gm-map" class="m-t" style="height: 300px;width: 100%;"></div>
-			<script type="text/javascript">
-function initMap() {
-  var map = new google.maps.Map(document.getElementById('gm-map'), {
-    zoom: 14,
-    center: { lat: -34.397, lng: 150.644 }
-  });
-  var geocoder = new google.maps.Geocoder();
-
-  geocodeAddress(geocoder, map);
-}
-
-function geocodeAddress(geocoder, resultsMap) {
-  var address = '{$item.company_address}';
-  geocoder.geocode({ 'address': address }, function(results, status) {
-    if (status === google.maps.GeocoderStatus.OK) {
-      resultsMap.setCenter(results[0].geometry.location);
-      var marker = new google.maps.Marker({
-        map: resultsMap,
-        position: results[0].geometry.location
-      });
-    } else {
-      alert('Geocode was not successful for the following reason: ' + status);
-    }
-  });
-}
-			</script>
-			<script async defer
-			        src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
-		</div>
 	</div>
 
 	<div class="col-md-8">
 		{if !empty($item.pictures)}
 			{ia_add_media files='fotorama'}
-			{$pics=unserialize($item.pictures)}
 
 			<div class="ia-item-view__gallery">
 				<div class="fotorama" 
@@ -105,8 +72,8 @@ function geocodeAddress(geocoder, resultsMap) {
 					 data-ratio="800/400"
 					 data-allowfullscreen="true"
 					 data-fit="{$core.config.template_fotorama_service}">
-					{foreach $pics as $entry}
-						<a class="ia-item-view__gallery__item" href="{ia_image type='thumbnail' file=$entry.path url=true type='large'}">{ia_image type='thumbnail' file=$entry.path title=$entry.title}</a>
+					{foreach $item.pictures as $entry}
+						<a class="ia-item-view__gallery__item" href="{ia_image type='thumbnail' file=$entry url=true type='large'}">{ia_image type='thumbnail' file=$entry title=$entry.title}</a>
 					{/foreach}
 				</div>
 			</div>
