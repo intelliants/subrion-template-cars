@@ -2,8 +2,8 @@
 	<div class="ia-items featured-cars">
 		{foreach $car_blocks_data.featured as $item}
 			<div class="ia-item -with-bg">
-				{if $item.auto_pictures}
-					<a href="{$item.link}" class="ia-item__image">{ia_image type='thumbnail' file=$item.auto_pictures[0] title=$item.model}</a>
+				{if $item.pictures}
+					<a href="{$item.link}" class="ia-item__image">{ia_image type='thumbnail' file=$item.pictures[0] title=$item.model}</a>
 				{/if}
 
 				<div class="ia-item__content">

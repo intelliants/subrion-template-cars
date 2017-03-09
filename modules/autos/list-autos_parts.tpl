@@ -27,7 +27,7 @@
 
 		<div class="ia-item__additional">
 			<p class="text-success">{$core.config.currency} {$listing.price}</p>
-			{if isset($listing.company_phone) && $listing.company_phone}
+			{if !empty($listing.company_phone)}
 				<p><span class="fa fa-phone"></span> {$listing.company_phone}</p>
 			{/if}
 		</div>

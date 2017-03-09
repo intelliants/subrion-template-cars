@@ -64,7 +64,7 @@
 							</div>
 							<div class="q-search__more-actions">
 								<label class="checkbox-inline c-checkbox">
-									<input type="checkbox" name="auto_pictures" value="1" checked>
+									<input type="checkbox" name="pictures" value="1" checked>
 									<span class="fa fa-square"></span>
 									{lang key='with_pictures_only'}
 								</label>
@@ -93,4 +93,4 @@
 		</div>
 	</div>
 </div>
-{ia_print_js files='_IA_URL_packages/autos/js/front/search'}
+{ia_print_js files='_IA_URL_modules/autos/js/front/search'}

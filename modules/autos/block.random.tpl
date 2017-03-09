@@ -4,11 +4,11 @@
 		{foreach $car_blocks_data.random as $item}
 			<div class="ia-carousel__item">
 				<div class="ia-card ia-card--small -{$item.status} {if 'hidden' == $item.status}-hidden{/if} {if $item.featured}-featured{/if} {if $item.sponsored}-sponsored{/if}">
-					{if $item.auto_pictures}
+					{if $item.pictures}
 						<a class="ia-card__image" href="{$item.link}">
-							{ia_image type='thumbnail' file=$item.auto_pictures[0] title=$item.model}
+							{ia_image type='thumbnail' file=$item.pictures[0] title=$item.model}
 							<span class="ia-card__support-info">
-								<span class="pull-left"><span class="fa fa-image"></span> {$item.auto_pictures_num}</span>
+								<span class="pull-left"><span class="fa fa-image"></span> {$item.pictures_num}</span>
 								<span class="pull-right">{$item.date_added|date_format:$core.config.date_format}</span>
 							</span>
 						</a>

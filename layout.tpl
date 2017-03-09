@@ -177,7 +177,7 @@
 								&copy; {$smarty.server.REQUEST_TIME|date_format:'%Y'} {lang key='powered_by_subrion'}
 							</p>
 							<p>
-								<a class="back-to-top js-back-to-top" href="#"><span class="fa fa-angle-up"></span></a>								
+								<a class="back-to-top js-back-to-top" href="#"><span class="fa fa-angle-up"></span></a>
 							</p>
 						</div>
 					</div>

@@ -1,4 +1,4 @@
-{if isset($news_latest) && $news_latest}
+{if !empty($news_latest)}
 	<div class="news">
 		<div class="container">
 			<a href="#" class="btn btn-primary pull-right">All news</a>

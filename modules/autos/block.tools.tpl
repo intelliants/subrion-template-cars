@@ -14,8 +14,8 @@
 					<div class="ia-items recently-viewed-cars">
 						{foreach $car_blocks_data.recently_viewed as $entry}
 							<div class="ia-item">
-								{if isset($entry.auto_pictures[0]) && $entry.auto_pictures[0]}
-									<a href="{ia_url type='url' item='autos' data=$entry}" class="ia-item__image">{ia_image type='thumbnail' file=$entry.auto_pictures[0] title=$entry.model|strip_tags|truncate:'30' width=60}</a>
+								{if !empty($entry.pictures[0])}
+									<a href="{ia_url type='url' item='autos' data=$entry}" class="ia-item__image">{ia_image type='thumbnail' file=$entry.pictures[0] title=$entry.model|strip_tags|truncate:'30' width=60}</a>
 								{/if}
 
 								<div class="ia-item__content">
@@ -36,8 +36,8 @@
 					<div class="ia-items saved-cars">
 						{foreach $car_blocks_data.saved_listings as $entry}
 							<div class="ia-item">
-								{if isset($entry.auto_pictures[0]) && $entry.auto_pictures[0]}
-									<a href="{ia_url type='url' item='autos' data=$entry}" class="ia-item__image">{ia_image type='thumbnail' file=$entry.auto_pictures[0] title=$entry.model|strip_tags|truncate:'30' width=60}</a>
+								{if !empty($entry.pictures[0])}
+									<a href="{ia_url type='url' item='autos' data=$entry}" class="ia-item__image">{ia_image type='thumbnail' file=$entry.pictures[0] title=$entry.model|strip_tags|truncate:'30' width=60}</a>
 								{/if}
 
 								<div class="ia-item__content">
@@ -58,8 +58,8 @@
 					<div class="ia-items compare-cars">
 						{foreach $car_blocks_data.compare_listings as $entry}
 							<div class="ia-item">
-								{if isset($entry.auto_pictures[0]) && $entry.auto_pictures[0]}
-									<a href="{ia_url type='url' item='autos' data=$entry}" class="ia-item__image">{ia_image type='thumbnail' type='thumbnail' file=$entry.auto_pictures[0] title=$entry.model|strip_tags|truncate:'30' width=60}</a>
+								{if !empty($entry.pictures[0])}
+									<a href="{ia_url type='url' item='autos' data=$entry}" class="ia-item__image">{ia_image type='thumbnail' type='thumbnail' file=$entry.pictures[0] title=$entry.model|strip_tags|truncate:'30' width=60}</a>
 								{/if}
 
 								<div class="ia-item__content">

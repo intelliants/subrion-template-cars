@@ -6,17 +6,15 @@
 				{foreach $car_blocks_data.recent as $item}
 					<div class="col-md-2 col-sm-2">
 						<div class="ia-card ia-card--small -{$item.status} {if 'hidden' == $item.status}-hidden{/if} {if $item.featured}-featured{/if} {if $item.sponsored}-sponsored{/if}">
-			
-							{if $item.auto_pictures}
+							{if $item.pictures}
 								<a class="ia-card__image" href="{$item.link}">
-									{ia_image type='thumbnail' file=$item.auto_pictures[0] title=$item.model}
+									{ia_image type='thumbnail' file=$item.pictures[0] title=$item.model}
 									<span class="ia-card__support-info">
-										<span class="pull-left"><span class="fa fa-image"></span> {$item.auto_pictures_num}</span>
+										<span class="pull-left"><span class="fa fa-image"></span> {$item.pictures_num}</span>
 										<span class="pull-right">{$item.date_added|date_format:$core.config.date_format}</span>
 									</span>
 								</a>
 							{/if}
-			
 							<div class="ia-card__content">
 								<div class="ia-card__actions dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-ellipsis-v"></span></a>
@@ -31,7 +29,7 @@
 							</div>
 						</div>
 					</div>
-			
+
 					{if $item@iteration % 6 == 0 && !$item@last}
 						</div>
 						<div class="row">

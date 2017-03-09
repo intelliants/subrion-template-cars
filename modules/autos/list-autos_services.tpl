@@ -34,7 +34,7 @@
 		</div>
 
 		<div class="ia-item__additional">
-			{if isset($listing.company_phone) && $listing.company_phone}
+			{if !empty($listing.company_phone)}
 				<p><span class="fa fa-phone"></span> {$listing.company_phone}</p>
 			{/if}
 		</div>

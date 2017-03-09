@@ -1,7 +1,7 @@
 <div class="v-item">
 	<div class="row">
 		<div class="col-md-6">
-			{if !empty($item.auto_pictures)}
+			{if !empty($item.pictures)}
 				{ia_add_media files='js: _IA_TPL_fotorama'}
 
 				<div class="v-item__gallery">
@@ -11,8 +11,8 @@
 						 data-ratio="800/400"
 						 data-allowfullscreen="true"
 						 data-fit="{$core.config.template_fotorama_car}">
-						{foreach $item.auto_pictures as $entry}
-							<a class="v-item__gallery__item" href="{ia_image file=$entry url=true type='large'}">{ia_image type='large' file=$entry title=$entry}</a>
+						{foreach $item.pictures as $entry}
+							<a class="v-item__gallery__item" href="{ia_image file=$entry url=true type='large'}">{ia_image type='large' file=$entry title=$item.model}</a>
 						{/foreach}
 					</div>
 				</div>
@@ -118,7 +118,6 @@
 									<td>{$item.horse_power}</td>
 								</tr>
 							{/if}
-							
 							{if $item.drive_type}
 								<tr>
 									<td>{lang key='field_autos_drive_type'}</td>
@@ -153,22 +152,22 @@
 				<h3>{lang key='car_features'}</h3>
 				<div class="v-item-features">
 					{foreach explode(',', $item.options_features) as $opt}
-						<div class="v-item-features__item"><span class="fa fa-check-square"></span> {lang key="field_options_features_{$opt}"}</div>
+						<div class="v-item-features__item"><span class="fa fa-check-square"></span> {lang key="field_autos_options_features+{$opt}"}</div>
 					{/foreach}
 				</div>
 			</div>
 		{/if}
-		
+
 		{if $item.additional_info}
 			<div class="v-item-info__section">
-				<h3>{lang key='field_additional_info'}</h3>
+				<h3>{lang key='field_autos_additional_info'}</h3>
 				{$item.additional_info}
 			</div>
 		{/if}
 
 		{ia_hooker name='smartyItemViewBeforeTabs'}
 
-		{include file='item-view-tabs.tpl' isView=true exceptions=array('model', 'price', 'release_year', 'condition', 'mileage', 'engine', 'engine_type', 'engine_size', 'horse_power', 'transmission', 'auto_pictures', 'fuel_type', 'body_type', 'exterior_color', 'door_count', 'metallic', 'interior_color', 'interior_leather', 'drive_type', 'vin_code', 'additional_info', 'options_features') class='v-item-info__section'}
+		{include file='item-view-tabs.tpl' isView=true exceptions=array('model', 'price', 'release_year', 'condition', 'mileage', 'engine', 'engine_type', 'engine_size', 'horse_power', 'transmission', 'pictures', 'fuel_type', 'body_type', 'exterior_color', 'door_count', 'metallic', 'interior_color', 'interior_leather', 'drive_type', 'vin_code', 'additional_info', 'options_features') class='v-item-info__section'}
 
 		{ia_hooker name='smartyViewListingBeforeFooter'}
 	</div>

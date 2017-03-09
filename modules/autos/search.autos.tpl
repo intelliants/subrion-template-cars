@@ -1,4 +1,4 @@
-{if isset($listings) && $listings}
+{if !empty($listings)}
 	<div class="ia-cards">
 		<div class="ia-cards__items{if isset($smarty.cookies.cardsLayout)} -{$smarty.cookies.cardsLayout}{/if}">
 			<div class="row">
@@ -6,7 +6,7 @@
 					<div class="col-md-3">
 						{include file='extra:autos/list-autos'}
 					</div>
-			
+
 					{if $listing@iteration % 4 == 0 && !$listing@last}
 						</div>
 						<div class="row">
