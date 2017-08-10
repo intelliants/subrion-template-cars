@@ -21,10 +21,10 @@
 								<li>{printFavorites item=$item itemtype='autos' guests=true}</li>
 								{if 'favorites' != $core.page.name}
 									<li>
-										<a href="#" class="btn-compare{if ($listing.compare)} btn-compare--added{/if}" data-id="{$listing.id}">
+										<a href="#" class="btn-compare{if ($item.compare)} btn-compare--added{/if}" data-id="{$item.id}">
 											<span class="btn-compare__icon fa fa-exchange"></span>
 											<span class="btn-compare__text">
-												{if ($listing.compare)}
+												{if ($item.compare)}
 													{lang key='remove_from_compare'}
 												{else}
 													{lang key='add_to_compare'}
