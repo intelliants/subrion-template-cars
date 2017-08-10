@@ -26,6 +26,12 @@
 							<span class="label label-{$item.status}" title="{lang key=$item.status default=$item.status}"><span class="fa fa-warning"></span> {lang key=$item.status default=$item.status}</span>
 						</li>
 					{/if}
+					<li>
+						<a href="#" class="btn-compare{if ($item.compare)} btn-compare--added{/if}" data-id="{$item.id}">
+							<i class="btn-compare__icon fa fa-exchange{if ($item.compare)} text-primary{/if}"></i>
+						</a>
+						{ia_print_js files='_IA_URL_modules/autos/js/front/comparison'}
+					</li>
 					{foreach $core.actions as $name => $action}
 						<li>
 							{if 'action-favorites' == $name}
