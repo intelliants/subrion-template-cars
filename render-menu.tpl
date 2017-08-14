@@ -5,7 +5,7 @@
 {elseif 'account' == $position}
 	{if 'account' == $menu.name && $member && $core.config.members_enabled}
 		<ul class="nav navbar-nav navbar-right nav-account">
-			<li class="hidden-xs"><a href="{$smarty.const.IA_URL}comparison/"><span class="fa fa-exchange text-primary"></span> {lang key='page_title_autos_comparison'}</a></li>
+			<li class="hidden-xs"><a href="{$core.packages.autos.url}comparison/"><span class="fa fa-exchange text-primary"></span> {lang key='page_title_autos_comparison'}</a></li>
 			<li><a class="navbar-btn-wishlist" href="{$smarty.const.IA_URL}favorites/"><span class="fa fa-star"></span> {lang key='wishlist'}</a></li>
 			<!-- <li><a class="navbar-btn-compare" href="#"><span class="fa fa-sort-amount-desc"></span> {lang key='compare'}</a></li> -->
 			<li class="dropdown">
@@ -22,7 +22,7 @@
 		</ul>
 	{else}
 		<ul class="nav navbar-nav navbar-right nav-account">
-			<li><a href="{$smarty.const.IA_URL}comparison/"><span class="fa fa-exchange text-primary"></span> {lang key='page_title_autos_comparison'}</a></li>
+			<li><a href="{$core.packages.autos.url}comparison/"><span class="fa fa-exchange text-primary"></span> {lang key='page_title_autos_comparison'}</a></li>
 			<li><a class="navbar-btn-wishlist" href="{$smarty.const.IA_URL}favorites/"><span class="fa fa-star"></span> {lang key='wishlist'}</a></li>
 			<!-- <li><a class="navbar-btn-compare" href="#"><span class="fa fa-sort-amount-desc"></span> {lang key='compare'}</a></li> -->
 			<li><a data-toggle="modal" data-target="#loginModal" href="#" class="navbar-btn-login"><span class="fa fa-user"></span> <span class="-guest">{lang key='login_sign_up'}</span></a></li>
