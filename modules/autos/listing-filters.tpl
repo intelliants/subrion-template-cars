@@ -24,9 +24,9 @@
 {ia_add_media files='js:jquery/plugins/jquery.ia-dropdown.min'}
 {ia_add_js}
 	$(function() {
-	$('.js-filters-form').iaDropdown({
-	url: intelli.config.ia_url + 'profile/autos.json',
-	valueHolder: 'model'
-	});
+		$('.js-filters-form').iaDropdown({
+			url: intelli.config.ia_url + 'profile/autos.json',
+			valueHolder: 'model'
+		});
 	});
 {/ia_add_js}

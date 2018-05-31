@@ -13,9 +13,7 @@
 {if !empty($listings)}
 	<div class="ia-cards">
 		<div class="ia-cards__actions">
-			{if 'autos_index_member' == $core.page.name}
-				{include file='module:autos/listing-filters.tpl'}
-			{/if}
+
 			{if !isset($no_sorting)}
 				<div class="ia-cards__sorting{if 'autos_index_member' == $core.page.name} pull-right m-l{/if}">
 					{lang key='sort_by'}:
@@ -83,13 +81,13 @@
 		{/if}
 	</div>
 {elseif !isset($category.id)}
-	<div class="ia-cards">
-		<div class="ia-cards__actions">
-			{if 'autos_index_member' == $core.page.name}
-				{include file='module:autos/listing-filters.tpl'}
-			{/if}
-		</div>
-	</div>
+	{*<div class="ia-cards">*}
+		{*<div class="ia-cards__actions">*}
+			{*{if 'autos_index_member' == $core.page.name}*}
+				{*{include 'module:autos/listing-filters.tpl'}*}
+			{*{/if}*}
+		{*</div>*}
+	{*</div>*}
 	
 	<div class="alert alert-info">
 		{lang key='no_listings_to_show'}

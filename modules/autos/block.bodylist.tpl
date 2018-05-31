@@ -4,7 +4,7 @@
 			{foreach $car_blocks_data.body as $name => $entry}
 				<div class="col-sm-3">
 					<a href="{$entry.url}" class="pr-list__item">
-						<img src="{$img}bodytypes/{$name}.png" alt="{$item.title}">
+						<img src="{$img}bodytypes/{$name}.png" alt="{$entry.title}">
 						<span class="pr-list__item__title">{$entry.title|escape:'html'}</span>
 					</a>
 				</div>
@@ -16,4 +16,4 @@
 			{/foreach}
 		</div>
 	</div>
-{/if}
+{/if}git diff
