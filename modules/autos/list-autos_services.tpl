@@ -1,10 +1,9 @@
 <div class="ia-item ia-item--border ia-item--{$listing.status} {if $listing.featured}ia-item--featured{/if} {if $listing.sponsored}ia-item--sponsored{/if}">
-	{if $listing.logo}
-		{$logo = unserialize($listing.logo[0])}
-		<a class="ia-item__image" href="{ia_url item='autos_services' data=$listing type='url'}">
-			{ia_image type='thumbnail' file=$logo title="{$listing.title}" class='img-responsive'}
-		</a>
-	{/if}
+    {if !empty($listing.logo)}
+        <a class="ia-item__image" href="{$listing.link}">
+            {ia_image file=$listing.logo title=$listing.title class='img-responsive' type='thumbnail'}
+        </a>
+    {/if}
 
 	<div class="ia-item__labels">
 		{if $listing.sponsored}<span class="label label-warning" title="{lang key='sponsored'}"><span class="fa fa-star"></span> {lang key='sponsored'}</span>{/if}
@@ -28,7 +27,7 @@
 				{$services = explode(',', $listing.categories)}
 
 				{foreach $services as $service}
-					{lang key="field_autos_services_categories_{$service}"}{if !$service@last}, {/if}
+                    {lang key="field_autos_service_categories+{$service}"}{if !$service@last}, {/if}
 				{/foreach}
 			</small>
 		</div>

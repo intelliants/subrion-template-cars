@@ -30,13 +30,14 @@
 
 		{ia_print_css display='on'}
 
-		{ia_add_js}
+        {ia_add_js}
 			intelli.pageName = '{$core.page.name}';
-
+			intelli.securityToken = '{$securityToken}';
+			intelli.config.url = '{$smarty.const.IA_URL}';
 			{foreach $core.customConfig as $key => $value}
 				intelli.config.{$key} = '{$value}';
 			{/foreach}
-		{/ia_add_js}
+        {/ia_add_js}
 	</head>
 
 	<body class="page-{$core.page.name}{if $core.config.fixed_navbar} -fixed-navbar{/if}">

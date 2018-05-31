@@ -5,8 +5,8 @@
 				{if $make.priority}
 					<div class="col-md-2 col-sm-3">
 						<a href="{$make.url}" class="pr-list__item">
-							<img src="{$core.page.nonProtocolUrl}uploads/{$make.icon.path}" alt="{$make.title|escape:'html'}">
-							<span class="pr-list__item__title">{$make.title|escape:'html'}</span>
+                            {ia_image file=$make.icon type='large' title=$make.title|escape}
+							<span class="pr-list__item__title">{$make.title|escape}</span>
 							<span class="pr-list__item__num">{$make.num|default:0}</span>
 						</a>
 					</div>

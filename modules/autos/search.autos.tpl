@@ -4,7 +4,7 @@
 			<div class="row">
 				{foreach $listings as $listing}
 					<div class="col-md-3">
-						{include file='extra:autos/list-autos'}
+						{include file='module:autos/list-autos.tpl'}
 					</div>
 
 					{if $listing@iteration % 4 == 0 && !$listing@last}

@@ -22,25 +22,25 @@
 			<div class="tab-content">
 				<div class="tab-pane active" id="tab_find">
 					{if isset($car_blocks_data.search)}
-						<form action="{$smarty.const.IA_URL}search/cars/">
+						<form action="{$smarty.const.IA_URL}search/cars/" id="js-autos-qs-form">
 							<div class="container-fluid q-search__inputs">
 								<div class="row">
 									<div class="col-md-2">
 										<div class="btn-group btn-group-justified" data-toggle="buttons">
 											<label class="btn btn-primary">
-												<input type="radio" name="condition" value="new" autocomplete="off"> <span class="fa fa-check"></span> {lang key='field_autos_condition+new'}
+												<input type="radio" name="condition" value="new" autocomplete="off"> <span class="fa fa-check"></span> {lang key='field_auto_condition+new'}
 											</label>
 											<label class="btn btn-primary active">
-												<input type="radio" name="condition" value="used" autocomplete="off" checked> <span class="fa fa-check"></span> {lang key='field_autos_condition+used'}
+												<input type="radio" name="condition" value="used" autocomplete="off" checked> <span class="fa fa-check"></span> {lang key='field_auto_condition+used'}
 											</label>
 										</div>
 									</div>
 									<div class="col-md-2">
 										<select class="form-control js-car-make" name="mk">
 											<option value="">{lang key='make'}</option>
-											{foreach $car_blocks_data.search.categories as $item}
-												<option value="{$item.id}"{if isset($smarty.get.mk) && $smarty.get.mk == $item.id} selected{/if}>{$item.name|escape:'html'}</option>
-											{/foreach}
+                                            {foreach $car_blocks_data.search.categories as $item}
+												<option value="{$item.id}"{if isset($smarty.get.mk) && $smarty.get.mk == $item.id} selected{/if}>{$item.name|escape}</option>
+                                            {/foreach}
 										</select>
 									</div>
 									<div class="col-md-2">

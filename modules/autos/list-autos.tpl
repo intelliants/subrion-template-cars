@@ -63,12 +63,12 @@
 		<a class="ia-card__title" href="{$listing.link}">{$listing.model}, {$listing.release_year}</a>
 		<p class="ia-card__sub-title">{$listing.price_formatted}</p>
 		<div class="ia-car-info">
-			<a class="ia-car-info__icon ia-car-info__icon--body" href="{$listing.link}">{lang key="field_autos_body_type+{$listing.body_type}"}</a>
+			<a class="ia-car-info__icon ia-car-info__icon--body" href="{$listing.link}">{lang key="field_auto_body_type+{$listing.body_type}"}</a>
 			{if $listing.engine}
-				<a class="ia-car-info__icon ia-car-info__icon--engine" href="{$listing.link}">{lang key="field_autos_engine+{$listing.engine}"}{if $listing.engine_type} {lang key="field_autos_engine_type+{$listing.engine_type}"}{/if}{if $listing.engine_size} {$listing.engine_size}{/if}</a>
+				<a class="ia-car-info__icon ia-car-info__icon--engine" href="{$listing.link}">{lang key="field_auto_engine+{$listing.engine}"}{if $listing.engine_type} {lang key="field_auto_engine_type+{$listing.engine_type}"}{/if}{if $listing.engine_size} {$listing.engine_size}{/if}</a>
 			{/if}
 			{if $listing.transmission}
-				<a class="ia-car-info__icon ia-car-info__icon--transmission" href="{$listing.link}">{lang key="field_autos_transmission+{$listing.transmission}"}</a>
+				<a class="ia-car-info__icon ia-car-info__icon--transmission" href="{$listing.link}">{lang key="field_auto_transmission+{$listing.transmission}"}</a>
 			{/if}
 			{if $listing.mileage}
 				<a class="ia-car-info__icon ia-car-info__icon--mileage" href="{$listing.link}">{$listing.mileage}</a>
@@ -82,20 +82,20 @@
 		<table class="ia-card__info-table">
 			<tbody>
 				<tr>
-					<td>{lang key='field_autos_condition'}</td>
-					<td><div class="text-overflow"><a href="{$smarty.const.IA_URL}search/cars/condition:{$listing.condition}/">{lang key="field_autos_condition+{$listing.condition}"}</a></div></td>
+					<td>{lang key='field_auto_condition'}</td>
+					<td><div class="text-overflow"><a href="{$smarty.const.IA_URL}search/cars/condition:{$listing.condition}/">{lang key="field_auto_condition+{$listing.condition}"}</a></div></td>
 				</tr>
 				<tr>
-					<td>{lang key='field_autos_body_type'}:</td>
+					<td>{lang key='field_auto_body_type'}:</td>
 					<td>
 						<div class="text-overflow">
-							<a href="{$smarty.const.IA_URL}search/cars/body:{$listing.body_type}/">{lang key="field_autos_body_type+{$listing.body_type}"}</a>
+							<a href="{$smarty.const.IA_URL}search/cars/body:{$listing.body_type}/">{lang key="field_auto_body_type+{$listing.body_type}"}</a>
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td>{lang key='field_autos_exterior_color'}:</td>
-					<td><b>{lang key="field_autos_exterior_color+{$listing.exterior_color}"}</b></td>
+					<td>{lang key='field_auto_exterior_color'}:</td>
+					<td><b>{lang key="field_auto_exterior_color+{$listing.exterior_color}"}</b></td>
 				</tr>
 			</tbody>
 		</table>

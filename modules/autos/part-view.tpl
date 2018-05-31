@@ -24,16 +24,16 @@
 		<table class="v-item-table">
 			<tbody>
 				<tr>
-					<td>{lang key='field_autos_parts_price'}</td>
+					<td>{lang key='field_autos_part_price'}</td>
 					<td><b class="text-success">{$core.config.currency} {$item.price}</b></td>
 				</tr>
 				<tr>
-					<td>{lang key='field_autos_parts_categories'}</td>
+					<td>{lang key='field_autos_part_categories'}</td>
 					<td>
 						{$cats = explode(',', $item.categories)}
 
 						{foreach $cats as $cat}
-							{lang key="field_autos_parts_categories_{$cat}"}{if !$cat@last}, {/if}
+                            {lang key="field_autos_part_categories+{$cat}"}{if !$cat@last}, {/if}
 						{/foreach}
 					</td>
 				</tr>
@@ -64,20 +64,19 @@
 				</div>
 			</div>
 		{/if}
-
-		<div class="v-item-info">
-			<div class="v-item-info__section">
-				<h3>{lang key='details'}</h3>
-				{$item.description|escape:'html'}
-			</div>
-		</div>
-
-		<div class="m-t-lg">
-			{ia_hooker name='smartyItemViewBeforeTabs'}
-
-			{include file='item-view-tabs.tpl' isView=true exceptions=['pictures', 'title', 'price', 'categories', 'description', 'part_number'] class='ia-item-view-tabs'}
-
-			{ia_hooker name='smartyViewListingBeforeFooter'}
-		</div>
 	</div>
+</div>
+<div class="v-item-info">
+	<div class="v-item-info__section">
+		<h3>{lang key='details'}</h3>
+        {$item.description|escape:'html'}
+	</div>
+</div>
+
+<div class="m-t-lg">
+    {ia_hooker name='smartyItemViewBeforeTabs'}
+
+    {include file='item-view-tabs.tpl' isView=true exceptions=['pictures', 'title', 'price', 'categories', 'description', 'part_number'] class='ia-item-view-tabs'}
+
+    {ia_hooker name='smartyViewListingBeforeFooter'}
 </div>

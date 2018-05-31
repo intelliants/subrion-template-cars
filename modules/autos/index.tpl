@@ -14,7 +14,7 @@
 	<div class="ia-cards">
 		<div class="ia-cards__actions">
 			{if 'autos_index_member' == $core.page.name}
-				{include file='extra:autos/listing-filters'}
+				{include file='module:autos/listing-filters.tpl'}
 			{/if}
 			{if !isset($no_sorting)}
 				<div class="ia-cards__sorting{if 'autos_index_member' == $core.page.name} pull-right m-l{/if}">
@@ -24,14 +24,14 @@
 							{if 'release_year' != $sorting.field}
 								{lang key=$sorting.field}
 							{else}
-								{lang key='field_autos_release_year'}
+								{lang key='field_auto_release_year'}
 							{/if} 
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
 							<li><a href="{$smarty.const.IA_SELF}?sort=title" rel="nofollow"><span class="fa fa-font"></span> {lang key='title'}</a></li>
 							<li><a href="{$smarty.const.IA_SELF}?sort=price" rel="nofollow"><span class="fa fa-dollar"></span> {lang key='price'}</a></li>
-							<li><a href="{$smarty.const.IA_SELF}?sort=release_year" rel="nofollow"><span class="fa fa-calendar"></span> {lang key='field_autos_release_year'}</a></li>
+							<li><a href="{$smarty.const.IA_SELF}?sort=release_year" rel="nofollow"><span class="fa fa-calendar"></span> {lang key='field_auto_release_year'}</a></li>
 							<li><a href="{$smarty.const.IA_SELF}?sort=date" rel="nofollow"><span class="fa fa-clock-o"></span> {lang key='date'}</a></li>
 						</ul>
 					</div>
@@ -61,7 +61,7 @@
 			<div class="row">
 				{foreach $listings as $listing}
 					<div class="col-md-3">
-						{include file='extra:autos/list-autos'}
+						{include file='module:autos/list-autos.tpl'}
 					</div>
 
 					{if $listing@iteration % 4 == 0 && !$listing@last}
@@ -86,7 +86,7 @@
 	<div class="ia-cards">
 		<div class="ia-cards__actions">
 			{if 'autos_index_member' == $core.page.name}
-				{include file='extra:autos/listing-filters'}
+				{include file='module:autos/listing-filters.tpl'}
 			{/if}
 		</div>
 	</div>
