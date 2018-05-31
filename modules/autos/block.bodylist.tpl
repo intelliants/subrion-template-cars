@@ -16,4 +16,4 @@
 			{/foreach}
 		</div>
 	</div>
-{/if}git diff
+{/if}
